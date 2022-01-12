@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/bl4ckan4c0nda/bluewhale-ui/issues"
   },
-  "homepage": "https://github.com/bl4ckan4c0nda/bluewhale-ui#readme"
+  "homepage": "https://github.com/bl4ckan4c0nda/bluewhale-ui#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
 }
