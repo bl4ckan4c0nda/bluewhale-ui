@@ -5,22 +5,95 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ورود به کریپتو وی</title>
 </head>
-<body>
-
-<h1>this is login.html</h1>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-    <label class="form-check-label" for="flexCheckDefault">
-        Default checkbox
-    </label>
-</div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-    <label class="form-check-label" for="flexCheckChecked">
-        Checked checkbox
-    </label>
-</div>
+<body class="d-flex flex-column theme-light">
+    <header class="navbar navbar-light">
+        <div class="container-fluid d-flex justify-content-between">
+            <div class="d-flex align-items-center">
+                <a href="#" class="px-0 dark-toggler toggle-theme-mode"><i class="fal fa-moon hide-theme-dark align-middle"></i></a>
+                <a href="#" class="px-0 dark-toggler toggle-theme-mode"><i class="fal fa-sun hide-theme-light align-middle"></i></a>
+                <!-- begin:: NAV -->
+                <nav class="navbar navbar-expand-md">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">خانه</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">محصولات</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">تماس با ما</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">قوانین</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- end:: NAV -->
+            </div>
+            <!-- begin:: LOGO -->
+            <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                <a href="#">
+                    <img src="Flyvpn-02.svg" alt="flyvpn" class="navbar-brand-image">
+                </a>
+            </h1>
+            <!-- end:: LOGO -->
+        </div>
+    </header>
+    <div class="page page-center">
+        <div class="container-tight py-4">
+            <!-- begin:: CARD -->
+            <form action="" class="card card-md" autocomplete="off">
+                <!-- begin:: CARD BODY -->
+                <div class="card-body">
+                    <!-- begin:: CARD TITLE -->
+                    <h2 class="card-title text-center mb-4">ساخت حساب کاربری</h2>
+                    <!-- end:: CARD TITLE -->
+                    <!-- begin:: INPUT -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">ایمیل</label>
+                        <input type="text" id="email" class="form-control"/>
+                    </div>
+                    <!-- end:: INPUT -->
+                    <!-- begin:: INPUT -->
+                    <div class="mb-3">
+                        <label for="password" class="form-label">پسورد</label>
+                        <input type="password" id="password" class="form-control"/>
+                    </div>
+                    <!-- end:: INPUT -->
+                    <!-- begin:: INPUT -->
+                    <div class="mb-3">
+                        <label for="confirm_password" class="form-label">تایید پسورد</label>
+                        <input type="password" id="confirm_password" class="form-control"/>
+                    </div>
+                    <!-- end:: INPUT -->
+                    <!-- begin:: INPUT -->
+                    <div class="mb-3">
+                        <label class="form-check">
+                            <input type="checkbox" class="form-check-input">
+                            <span class="form-check-label">
+                                <a href="#">قوانین و مقررات </a>
+                                را خوانده ام و قبول دارم.
+                            </span>
+                        </label>
+                    </div>
+                    <!-- end:: INPUT -->
+                    <!-- begin:: SUBMIT BUTTON -->
+                    <div class="form-footer">
+                        <button type="submit" class="btn btn-primary w-100">عضویت</button>
+                    </div>
+                    <!-- end:: SUBMIT BUTTON -->
+                </div>
+                <!-- end::CARD BODY -->
+            </form>
+            <!-- end:: CARD -->
+        </div>
+    </div>
 </body>
 </html>

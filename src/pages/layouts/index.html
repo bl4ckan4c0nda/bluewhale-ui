@@ -7,18 +7,53 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
+<body class="theme-light">
+<header class="dashboard-nav">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <!-- begin::Item Nav -->
+        <div class="">
+                <span class="nav-item ms-3">
+                    <!-- begin:: User Profile (Just for mobile) -->
+                    <i class="fa-light fa-circle-user fs-2 align-middle cursor-pointer d-md-none"
+                       id="user-profile-toggler"></i>
+                    <div class="d-md-none user-profile-wrapper pt-3">
+                        <span class="user-info">
+                            <span class="email-one-char">L</span>
+                            loremipsum@gmail.com
+                        </span>
+                        <div class="user-profile-items">
+                            <ul class="list-unstyled">
+                                <li><a href="#"><i class="fal fa-home-alt"></i>داشبورد</a></li>
+                                <li><a href="#"><i class="fal fa-cog"></i>تنظیمات</a></li>
+                                <li><a href="#"><i class="fa-regular fa-server"></i>سرویس های فعال</a></li>
+                                <li><a href="#"><i class="fal fa-user-headset"></i>پشتیبانی</a></li>
+                                <li><a href="#"><i class="fa-light fa-arrow-right-from-bracket"></i>خروج</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end:: User Profile (Just for mobile) -->
+                    <i class="fa-light fa-circle-user fs-2 align-middle cursor-pointer" data-bs-toggle="dropdown"
+                       aria-label="Open user menu" aria-expanded="false"></i>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
 
-<button type="button" class="btn btn-link">Link</button>
-<h1>This is index.html</h1>
-
+                <a href="#" class="dropdown-item"><i class="fal fa-home-alt ms-2"></i>داشبورد</a></a>
+                <a href="#" class="dropdown-item"><i class="fa-regular fa-server ms-2"></i>سرویس های فعال</a></a>
+                <a href="#" class="dropdown-item"><i class="fal fa-cog ms-2"></i>تنظیمات</a></a>
+                <a href="#" class="dropdown-item"><i class="fal fa-user-headset ms-2"></i>پشتیبانی</a></a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item"><i class="fa-light fa-arrow-right-from-bracket ms-2"></i>خروج</a></a>
+              </div>
+                </span>
+        </div>
+        <!-- end::Item Nav -->
+        <!-- begin:: LOGO -->
+        <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+            <a href="#">
+                <img src="Flyvpn-02.svg" alt="flyvpn" class="navbar-brand-image">
+            </a>
+        </h1>
+        <!-- end:: LOGO -->
+    </div>
+</header>
 </body>
 </html>

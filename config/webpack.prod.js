@@ -4,6 +4,7 @@ const { merge } = require('webpack-merge')
 
 const paths = require('./paths')
 const common = require('./webpack.common')
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = merge(common, {
   mode: 'production',
@@ -38,6 +39,20 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: 'styles/[name].[contenthash].css',
       chunkFilename: '[id].css',
+    }),
+
+    // Copy HTML From src to dist after build
+    new HtmlWebpackPlugin({
+      template: paths.src + '/pages/layouts/index.html',
+      inject: true,
+      chunks: ['main'],
+      filename: '/pages/layouts/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: paths.src + '/pages/auth/login.html',
+      inject: true,
+      chunks: ['main'],
+      filename: '/pages/auth/login.html'
     }),
   ],
   optimization: {
