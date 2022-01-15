@@ -69,5 +69,11 @@ module.exports = merge(common, {
             chunks: ['main'],
             filename: 'login.html'
         }),
+        new HtmlWebpackPlugin({
+            template: paths.src + '/pages/layouts/dashboard-sidebar.html',
+            inject: true,
+            chunks: ['main'],
+            filename: 'dashboard-sidebar.html'
+        }),
     ]
 })
