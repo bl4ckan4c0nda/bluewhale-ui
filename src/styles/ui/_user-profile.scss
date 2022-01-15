@@ -1,0 +1,123 @@
+.user-profile-wrapper {
+  background: $white;
+  position: fixed;
+  width: 100%;
+  min-height: 300px;
+  overflow-y: scroll;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transform: translateY(350px);
+  visibility: hidden;
+  display: none;
+  box-shadow: inset 0 1px 0 0 $navbar-light-border-color;
+  transition: 0.5s;
+  &.show {
+    transform: translateY(0);
+    visibility:visible;
+  }
+  .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: ltr;
+    box-shadow: inset 0 -1px 0 0 $navbar-light-border-color;
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+    .email-one-char {
+      width: 30px;
+      height: 30px;
+      background: $info;
+      display: inline-block;
+      border-radius: 100px;
+      margin-right: 10px;
+      text-align: center;
+      line-height: 2.3;
+      color: $white;
+    }
+  }
+  .user-profile-items {
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        padding: 1rem;
+        &:hover,
+        &:focus {
+          background: $body-bg;
+        }
+        &:hover a,
+        &:focus a {
+          color: $light-white-active;
+          text-decoration: none;
+        }
+        &:last-child {
+          box-shadow: inset 0 1px 0 0 $navbar-light-border-color;
+        }
+        a {
+          color: $light-white;
+          font-size: 1rem;
+          i {
+            margin-left: 0.5rem;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+.user-profile-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+
+// Dark
+.theme-dark .user-profile-wrapper {
+  background: $dark;
+  box-shadow: inset 0 1px 0 0 $navbar-dark-border-color;
+}
+.theme-dark .user-profile-wrapper .user-profile-wrapper .user-info {
+  box-shadow: inset 0 -1px 0 0 $navbar-dark-border-color;
+}
+.theme-dark .user-profile-wrapper .user-profile-wrapper .user-info .user-profile-wrapper .user-info .email-one-char {
+  background: $info;
+  color: $dark;
+}
+
+.theme-dark .user-profile-wrapper {
+  background: $dark;
+  box-shadow: inset 0 1px 0 0 $navbar-dark-border-color;
+  .user-info {
+    box-shadow: inset 0 -1px 0 0 $navbar-dark-border-color;
+    .email-one-char {
+      background: $info;
+      color: $dark;
+    }
+  }
+  .user-profile-items {
+    ul {
+      li {
+        &:hover,
+        &:focus {
+          background: $dark-body-color;
+        }
+        &:hover a,
+        &:focus a {
+          color: $white;
+        }
+        &:last-child {
+          box-shadow: inset 0 1px 0 0 $navbar-dark-border-color;
+        }
+        a {
+          color: $navbar-dark-color;
+          i {
+          }
+        }
+      }
+    }
+  }
+}

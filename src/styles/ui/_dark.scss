@@ -1,0 +1,14 @@
+.dark-toggler {
+  color: $navbar-light-color;
+  &:hover,
+  &:focus {
+    color: $navbar-light-active-color;
+  }
+}
+.theme-dark .dark-toggler {
+  color: $navbar-dark-color;
+  &:hover,
+  &:focus {
+    color: $navbar-dark-active-color;
+  }
+}

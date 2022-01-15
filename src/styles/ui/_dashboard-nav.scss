@@ -1,0 +1,22 @@
+.dashboard-nav {
+  box-shadow: inset 0 -1px 0 0 $navbar-light-border-color;
+  background-color: $white;
+  .nav-item {
+    color: $navbar-light-color;
+    &:hover,
+    &:focus {
+      color: $navbar-light-active-color;
+    }
+  }
+}
+.theme-dark .dashboard-nav {
+  box-shadow: inset 0 -1px 0 0 $navbar-dark-border-color;
+  background-color: $dark;
+  .nav-item {
+    color: $navbar-dark-color;
+    &:hover,
+    &:focus {
+      color: $navbar-dark-active-color;
+    }
+  }
+}
