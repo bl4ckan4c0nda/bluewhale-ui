@@ -4,7 +4,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-color: var(--#{$variable-prefix}border-color);
+  //border-color: var(--#{$variable-prefix}border-color);
+  border: none;
   white-space: nowrap;
 
   background-color: var(--#{$variable-prefix}btn-color, var(--#{$variable-prefix}card-bg));
@@ -154,7 +155,6 @@
   color: transparent !important;
   text-shadow: none !important;
   pointer-events: none;
-
   &:after {
     content: '';
     display: inline-block;
@@ -169,6 +169,11 @@
     left: calc(50% - .5rem);
     top: calc(50% - .5rem);
     animation: spinner-border .75s linear infinite;
+  }
+  &.btn-lg:after {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: calc(50% - .7rem);
   }
 }
 
@@ -190,7 +195,7 @@ $btn-colors: $theme-colors;
   .btn-outline-#{$name},
   .btn-ghost-#{$name} {
     --#{$variable-prefix}btn-color: #{$color};
-    --#{$variable-prefix}btn-color-interactive: #{theme-color-darker($color)};
+    --#{$variable-prefix}btn-color-interactive: #{shade-color($color, 8%)};
     --#{$variable-prefix}btn-color-text: #{color-contrast($color)};
   }
 
@@ -204,5 +209,26 @@ $btn-colors: $theme-colors;
 
   .btn-ghost-#{$name} {
     @extend %btn-ghost;
+  }
+}
+
+//
+// Button Sizes
+//
+
+.input-btn {
+  @include button-size($input-btn-padding-y - .15, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
+}
+
+// Custom btn css
+.theme-dark {
+  .btn-light-gray {
+    background: lighten($gray-800, 20%);
+    color: lighten($gray-800, 70%);
+
+    &:hover {
+      background: lighten($gray-800, 15%);
+      color: lighten($gray-800, 75%);
+    }
   }
 }

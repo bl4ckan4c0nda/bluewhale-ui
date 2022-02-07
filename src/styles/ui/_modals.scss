@@ -1,10 +1,10 @@
 .modal-content {
   .btn-close {
-    position: absolute;
+    /*position: absolute;
     top: 0;
     right: 0;
     width: $modal-header-height;
-    height: $modal-header-height;
+    height: $modal-header-height;*/
     margin: 0;
     padding: 0;
     z-index: 10;
@@ -37,7 +37,7 @@
   align-items: center;
   min-height: $modal-header-height;
   background: $modal-header-bg;
-  padding: 0 $modal-header-height 0 $modal-inner-padding;
+  padding: $modal-header-height $modal-inner-padding;
 }
 
 .modal-title {

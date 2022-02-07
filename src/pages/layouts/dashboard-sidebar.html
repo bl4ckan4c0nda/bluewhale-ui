@@ -8,55 +8,273 @@
     <title>Document</title>
 </head>
 <body class="theme-light">
-<header class="dashboard-nav">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-        <!-- begin::Item Nav -->
-        <div class="">
-            <div class="nav-item ms-3">
-                <!-- begin:: User Profile (Just for mobile) -->
-                <i class="fa-light fa-circle-user fs-2 align-middle cursor-pointer d-md-none"
-                   id="user-profile-toggler"></i>
-                <div class="d-md-none user-profile-wrapper pt-3">
+
+
+<div class="d-flex">
+    <!-- begin:: sidenav -->
+    <div class="sidenav">
+        <i class="fal fa-arrow-right fs-2 d-flex justify-content-end flex-row ms-3 mt-3 closeSideNav d-md-none"></i>
+        <ul class="sidenav-nav">
+            <li class="nav-item">
+                <a href="" class="nav-link">
+                    <i class="nav-link-icon fas fa-th-large fs-3 ms-2"></i>
+                    داشبورد
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">
+                    <i class="nav-link-icon fas fa-cog fs-3 ms-2"></i>
+                    داشبورد
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">
+                    <i class="nav-link-icon fas fa-th-large fs-3 ms-2"></i>
+                    داشبورد
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">
+                    <i class="nav-link-icon fas fa-cog fs-3 ms-2"></i>
+                    داشبورد
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">
+                    <i class="nav-link-icon fas fa-th-large fs-3 ms-2"></i>
+                    داشبورد
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">
+                    <i class="nav-link-icon fas fa-cog fs-3 ms-2"></i>
+                    داشبورد
+                </a>
+            </li>
+        </ul>
+
+        <!-- begin:: toggle between dark and light -->
+        <div class="switcher-mode">
+            <div class="switcher-mode-wrapper">
+                <div class="switcher-toggler">
+                    <i class="fal fa-sun align-middle"></i>
+                    <i class="fal fa-moon align-middle"></i>
+                </div>
+            </div>
+        </div>
+        <!-- end:: toggle between dark and light -->
+    </div>
+    <!-- end:: sidenav -->
+    <div class="flex-fill w-100">
+        <!-- begin:: Top nav -->
+        <header class="dashboard-nav">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <!-- begin::Item Nav -->
+                <div class="d-flex align-items-center">
+                    <div class="nav-item ms-3 d-md-none">
+                        <!-- begin:: sidebar nav toggler -->
+                        <i class="far fa-bars fs-2 cursor-pointer align-middle sidenav-toggler"></i>
+                        <!-- end:: sidebar nav toggler -->
+                    </div>
+                    <div class="nav-item ms-3">
+                        <!-- begin:: User Profile (Just for mobile) -->
+                        <i class="fa-light fa-circle-user fs-2 align-middle cursor-pointer d-md-none"
+                           id="user-profile-toggler"></i>
+                        <div class="d-md-none user-profile-wrapper pt-3">
                         <span class="user-info">
                             <span class="email-one-char">L</span>
                             loremipsum@gmail.com
                         </span>
-                    <div class="user-profile-items">
-                        <ul class="list-unstyled">
-                            <li><a href="#"><i class="fal fa-home-alt"></i>داشبورد</a></li>
-                            <li><a href="#"><i class="fal fa-cog"></i>تنظیمات</a></li>
-                            <li><a href="#"><i class="fa-regular fa-server"></i>سرویس های فعال</a></li>
-                            <li><a href="#"><i class="fal fa-user-headset"></i>پشتیبانی</a></li>
-                            <li><a href="#"><i class="fa-light fa-arrow-right-from-bracket"></i>خروج</a></li>
-                        </ul>
+                            <div class="user-profile-items">
+                                <ul class="list-unstyled">
+                                    <li><a href="#"><i class="fal fa-home-alt"></i>داشبورد</a></li>
+                                    <li><a href="#"><i class="fal fa-cog"></i>تنظیمات</a></li>
+                                    <li><a href="#"><i class="fa-regular fa-server"></i>سرویس های فعال</a></li>
+                                    <li><a href="#"><i class="fal fa-user-headset"></i>پشتیبانی</a></li>
+                                    <li><a href="#"><i class="fa-light fa-arrow-right-from-bracket"></i>خروج</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end:: User Profile (Just for mobile) -->
+                        <!-- begin:: User profile (large breakpoints) -->
+                        <i class="fa-light fa-circle-user fs-2 align-middle cursor-pointer d-none d-md-inline"
+                           data-bs-toggle="dropdown"
+                           aria-label="Open user menu" aria-expanded="false"></i>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="#" class="dropdown-item"><i class="fal fa-home-alt ms-2"></i>داشبورد</a></a>
+                            <a href="#" class="dropdown-item"><i class="fa-regular fa-server ms-2"></i>سرویس های فعال</a></a>
+                            <a href="#" class="dropdown-item"><i class="fal fa-cog ms-2"></i>تنظیمات</a></a>
+                            <a href="#" class="dropdown-item"><i class="fal fa-user-headset ms-2"></i>پشتیبانی</a></a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item"><i
+                                    class="fa-light fa-arrow-right-from-bracket ms-2"></i>خروج</a></a>
+                        </div>
+                        <!-- end:: User profile (large breakpoints) -->
                     </div>
                 </div>
-                <!-- end:: User Profile (Just for mobile) -->
-                <!-- begin:: User profile (large breakpoints) -->
-                <i class="fa-light fa-circle-user fs-2 align-middle cursor-pointer d-none d-md-inline"
-                   data-bs-toggle="dropdown"
-                   aria-label="Open user menu" aria-expanded="false"></i>
-                <div class="dropdown-menu">
-                    <a href="#" class="dropdown-item"><i class="fal fa-home-alt ms-2"></i>داشبورد</a></a>
-                    <a href="#" class="dropdown-item"><i class="fa-regular fa-server ms-2"></i>سرویس های فعال</a></a>
-                    <a href="#" class="dropdown-item"><i class="fal fa-cog ms-2"></i>تنظیمات</a></a>
-                    <a href="#" class="dropdown-item"><i class="fal fa-user-headset ms-2"></i>پشتیبانی</a></a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item"><i
-                            class="fa-light fa-arrow-right-from-bracket ms-2"></i>خروج</a></a>
+                <!-- end::Item Nav -->
+                <!-- begin:: LOGO -->
+                <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href="#">
+                        <img src="Flyvpn-02.svg" alt="flyvpn" class="navbar-brand-image">
+                    </a>
+                </h1>
+                <!-- end:: LOGO -->
+            </div>
+        </header>
+        <!-- end:: Top nav -->
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-fluid">
+                    <div class="row row-cards">
+                        <div class="col-12">
+                            <div class="card">
+                                <!-- begin:: section title -->
+                                <div class="page-header">
+                                    <div class="align-items-center">
+                                        <h2 class="page-title bordered-title">سرویس های فعال</h2>
+                                    </div>
+                                </div>
+                                <!-- end:: section title -->
+                                <!-- begin:: table -->
+                                <div class="table-responsive">
+                                    <table class="table table-vcenter card-table">
+                                        <thead>
+                                        <tr>
+                                            <th>نام</th>
+                                            <th>نام خانوادگی</th>
+                                            <th>شغل</th>
+                                            <th>وضعیت سرویس</th>
+                                            <th>دسترسی</th>
+                                            <th class="w-1">مدیریت</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="text-muted">لورم ایپسورم</td>
+                                            <td class="text-muted">
+                                                سرویس آیپی ثابت و اختصاصی یک ماهه
+                                            </td>
+                                            <td class="text-muted"><a href="#" class="text-reset">برنامه نویس</a></td>
+                                            <td class="text-muted">
+                                                <span class="badge rounded-pill bg-success">فعال</span>
+                                            </td>
+                                            <td class="text-muted">
+                                                مدیر
+                                            </td>
+                                            <td>
+                                                <div class="mini-manage-service">
+                                                    <a href="#" class="manage-item poweroff"><i class="far fa-power-off align-middle"></i></a>
+                                                    <a href="#" class="manage-item restart"><i class="far fa-redo-alt align-middle"></i></a>
+                                                    <a href="#" class="manage-item recharge"><i class="far fas fa-bolt align-middle"></i></a>
+                                                    <a href="#" class="manage-item settings"><i class="fas fa-cog align-middle"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- end:: table -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cards">
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="card">
+                                <!-- begin:: section title -->
+                                <div class="page-header bordered">
+                                    <div class="align-items-center">
+                                        <h2 class="page-title bordered-title">ورود ها</h2>
+                                    </div>
+                                </div>
+                                <!-- end:: section title -->
+                                <!-- begin:: logins history -->
+                                <div class="login-history">
+                                    <div class="login-history-item">
+                                        <div class="ip-date">
+                                            <div class="">195.201.82.206</div>
+                                            <div class="text-muted">2021-11-16 21:40:15</div>
+                                        </div>
+                                        <div class="device">
+                                            <div class="">Chrome V93.0.4619.140 (Windows)</div>
+                                        </div>
+                                    </div>
+                                    <div class="login-history-item">
+                                        <div class="ip-date">
+                                            <div class="">195.201.82.206</div>
+                                            <div class="text-muted">2021-11-16 21:40:15</div>
+                                        </div>
+                                        <div class="device">
+                                            <div class="">Chrome V93.0.4619.140 (Windows)</div>
+                                        </div>
+                                    </div>
+                                    <div class="login-history-item">
+                                        <div class="ip-date">
+                                            <div class="">195.201.82.206</div>
+                                            <div class="text-muted">2021-11-16 21:40:15</div>
+                                        </div>
+                                        <div class="device">
+                                            <div class="">Chrome V93.0.4619.140 (Windows)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end:: logins history -->
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="card">
+                                <!-- begin:: section title -->
+                                <div class="page-header bordered">
+                                    <div class="align-items-center">
+                                        <div class="col">
+                                            <h2 class="page-title bordered-title">تیکت ها</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end:: section title -->
+                                <div class="tickets-status">
+                                    <div class="tickets-status-item">
+                                        <a href="#">
+                                            قطعی سرویس - شناسه 1311
+                                        </a>
+                                        <span class="badge bg-success">پاسخ داده شده</span>
+                                    </div>
+                                    <div class="tickets-status-item">
+                                        <a href="#">
+                                            قطعی سرویس - شناسه 1311
+                                        </a>
+                                        <span class="badge bg-info">در حال بررسی</span>
+                                    </div>
+                                    <div class="tickets-status-item">
+                                        <a href="#">
+                                            قطعی سرویس - شناسه 1311
+                                        </a>
+                                        <span class="badge bg-secondary">بسته شده</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="card">
+                                <!-- begin:: section title -->
+                                <div class="page-header">
+                                    <div class="align-items-center">
+                                        <div class="col">
+                                            <h2 class="page-title bordered-title">سرویس های فعال</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end:: section title -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- end:: User profile (large breakpoints) -->
             </div>
         </div>
-        <!-- end::Item Nav -->
-        <!-- begin:: LOGO -->
-        <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
-            <a href="#">
-                <img src="Flyvpn-02.svg" alt="flyvpn" class="navbar-brand-image">
-            </a>
-        </h1>
-        <!-- end:: LOGO -->
     </div>
-</header>
+</div>
+
+
+<div class="backdrop"></div>
 </body>
 </html>

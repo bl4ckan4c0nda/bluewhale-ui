@@ -1,0 +1,21 @@
+.seed-wrapper {
+
+  .seed-list {
+    display: flex;
+    flex-wrap: wrap;
+    direction: ltr;
+    justify-content: space-between;
+    min-height: 135px;
+    align-items: center;
+    .seed-item {
+      background: darken($light,0.5%);
+      box-shadow: $card-shadow-inset;
+      padding: $seed-items-padding-y $seed-items-padding-x;
+      border-radius: $seed-items-radius;
+      font-size: $seed-items-font-size;
+      font-weight: 600;
+      min-width: 95px;
+      text-align: center;
+    }
+  }
+}

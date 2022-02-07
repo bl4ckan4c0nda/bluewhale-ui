@@ -1,5 +1,6 @@
 .row > * {
   min-width: 0;
+  margin-bottom: var(--#{$variable-prefix}gutter-y);
 }
 
 .col-separator {
@@ -56,7 +57,7 @@
 }
 
 .row-cards {
-  --#{$variable-prefix}gutter-x: #{$cards-grid-gap};
+  --#{$variable-prefix}gutter-x: #{$cards-grid-gap + .5};
   --#{$variable-prefix}gutter-y: #{$cards-grid-gap};
 
   .row-cards {

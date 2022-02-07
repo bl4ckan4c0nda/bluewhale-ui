@@ -1,0 +1,33 @@
+@mixin mini-manage-service-color(){
+
+}
+
+@mixin mini-manage-service-dark {
+  @include mini-manage-service-color()
+}
+.mini-manage-service {
+  @include mini-manage-service-color();
+  @include dark-mode {
+    @include mini-manage-service-dark();
+  }
+  display: flex;
+  .manage-item {
+    margin-left: 10px;
+
+    &.poweroff {
+      color: $poweroff;
+    }
+    &.restart {
+      color: $restart;
+    }
+    &.recharge {
+      color: $recharge;
+    }
+    &.settings {
+      color: $settings;
+    }
+    i {
+
+    }
+  }
+}

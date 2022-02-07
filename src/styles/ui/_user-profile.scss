@@ -1,3 +1,4 @@
+/*
 .user-profile-wrapper {
   background: $white;
   position: fixed;
@@ -119,5 +120,13 @@
         }
       }
     }
+  }
+}*/
+
+.profile-dropdown {
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 1px 2px rgb(0 0 0 / 20%);
   }
 }

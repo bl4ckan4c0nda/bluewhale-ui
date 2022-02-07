@@ -1,0 +1,29 @@
+.login-history {
+  padding: 1rem 0;
+  .login-history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: $login-history-border;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    .ip-date {
+      font-size: $font-size-base-less;
+      line-height: $line-height-lg;
+    }
+    .device {
+      font-size: $font-size-base-less;
+    }
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      border-width: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}

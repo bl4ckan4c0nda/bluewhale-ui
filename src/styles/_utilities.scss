@@ -1,100 +1,167 @@
 $margin-spacers: map-merge($spacers, (auto: auto, null: $spacer));
 
 $border-values: (
-  null: $border-width solid $border-color-transparent,
-  wide: $border-width-wide solid $border-color-transparent,
-  0: 0,
+        null: $border-width solid $border-color-transparent,
+        wide: $border-width-wide solid $border-color-transparent,
+        0: 0,
 );
 
 //Utilities
 $utilities: (
-  "object": (
-    property: object-fit,
-    class: object,
-    values: (
-      contain: contain,
-      cover: cover,
-      fill: fill,
-      scale-down: scale-down,
-      none: none,
-    )
-  ),
-  "spacing": (
-    property: letter-spacing,
-    class: tracking,
-    values: (
-      tight: -.05em,
-      normal: 0,
-      wide: .05em,
-    )
-  ),
-  "cursor": (
-    property: cursor,
-    class: cursor,
-    values: (
-      auto: auto,
-      pointer: pointer,
-      move: move,
-      not-allowed: not-allowed,
-      zoom-in: zoom-in,
-      zoom-out: zoom-out,
-      default: default,
-      none: none,
-      help: help,
-      progress: progress,
-      wait: wait,
-      text: text,
-      v-text: vertical-text,
-      grab: grab,
-      grabbing: grabbing,
-    )
-  ),
-  "border": (
-    property: border,
-    values: $border-values
-  ),
-  "border-top": (
-    property: border-top,
-    values: $border-values
-  ),
-  "border-end": (
-    class: border-end,
-    property: border-right,
-    values: $border-values
-  ),
-  "border-bottom": (
-    property: border-bottom,
-    values: $border-values
-  ),
-  "border-start": (
-    class: border-start,
-    property: border-left,
-    values: $border-values
-  ),
-  "border-x": (
-    class: border-x,
-    property: border-left border-right,
-    values: $border-values
-  ),
-  "border-y": (
-    class: border-y,
-    property: border-top border-bottom,
-    values: $border-values
-  ),
-  "width": (
-    property: width,
-    class: w,
-    values: $size-values
-  ),
-  "height": (
-    property: height,
-    class: h,
-    values: $size-values
-  ),
-  "columns": (
-    property: columns,
-    class: columns,
-    responsive: true,
-    values: 2 3 4
-  )
+        "object": (
+                property: object-fit,
+                class: object,
+                values: (
+                        contain: contain,
+                        cover: cover,
+                        fill: fill,
+                        scale-down: scale-down,
+                        none: none,
+                )
+        ),
+        "spacing": (
+                property: letter-spacing,
+                class: tracking,
+                values: (
+                        tight: -.05em,
+                        normal: 0,
+                        wide: .05em,
+                )
+        ),
+        "cursor": (
+                property: cursor,
+                class: cursor,
+                values: (
+                        auto: auto,
+                        pointer: pointer,
+                        move: move,
+                        not-allowed: not-allowed,
+                        zoom-in: zoom-in,
+                        zoom-out: zoom-out,
+                        default: default,
+                        none: none,
+                        help: help,
+                        progress: progress,
+                        wait: wait,
+                        text: text,
+                        v-text: vertical-text,
+                        grab: grab,
+                        grabbing: grabbing,
+                )
+        ),
+        "border": (
+                property: border,
+                values: $border-values
+        ),
+        "border-top": (
+                property: border-top,
+                values: $border-values
+        ),
+        "border-end": (
+                class: border-end,
+                property: border-right,
+                values: $border-values
+        ),
+        "border-bottom": (
+                property: border-bottom,
+                values: $border-values
+        ),
+        "border-start": (
+                class: border-start,
+                property: border-left,
+                values: $border-values
+        ),
+        "border-x": (
+                class: border-x,
+                property: border-left border-right,
+                values: $border-values
+        ),
+        "border-y": (
+                class: border-y,
+                property: border-top border-bottom,
+                values: $border-values
+        ),
+        "width": (
+                property: width,
+                class: w,
+                values: $size-values
+        ),
+        "height": (
+                property: height,
+                responsive:true,
+                class: h,
+                values: $size-values
+        ),
+        "min-height": (
+                property: min-height,
+                responsive:true,
+                class: min-h,
+                values: $size-values
+        ),
+        "columns": (
+                property: columns,
+                class: columns,
+                responsive: true,
+                values: 2 3 4
+        ),
+        "font-size": (
+                responsive: true,
+                property: font-size,
+                class: font,
+                values: $spacers
+        ),
+        "max-width": (
+                responsive: true,
+                property: max-width,
+                class: mw,
+                values: $size-values
+        ),
+        "rounded": (
+                property: border-radius,
+                class: rounded,
+                values: map-merge($spacers, (circle: 50%, pill: $border-radius-pill))
+          /*null: $border-radius,
+          0: 0,
+          1: $border-radius-sm,
+          2: $border-radius,
+          3: $border-radius-lg,*/
+        ),
+        "border-style": (
+                property: border-style,
+                class: b,
+                values: (
+                        dashed: dashed
+                )
+        ),
+        "position": (
+                property: position,
+                responsive: true,
+                values: static relative absolute fixed sticky
+        ),
+        "background-color": (
+                property: background-color,
+                class: bg,
+                responsive: true,
+                local-vars: (
+                        "bg-opacity": 1
+                ),
+                values: map-merge(
+                                $utilities-bg-colors,
+                                (
+                                        "transparent": transparent
+                                )
+                )
+        ),
+        // scss-docs-start utils-opacity
+        "opacity": (
+                property: opacity,
+                values: (
+                        0: 0,
+                        25: .25,
+                        50: .5,
+                        75: .75,
+                        80: .8,
+                        100: 1,
+                )
+        ),
 ) !default;

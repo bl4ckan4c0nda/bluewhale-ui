@@ -1,0 +1,9 @@
+
+@include media-breakpoint-up(md) {
+  .auth-right-section {
+    background: $white;
+    @include dark-mode {
+      background: $dark-mode-dark;
+    }
+  }
+}

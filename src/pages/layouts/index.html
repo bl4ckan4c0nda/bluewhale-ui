@@ -5,58 +5,303 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>داشبورد</title>
 </head>
 <body class="theme-light">
-<header class="dashboard-nav">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-        <!-- begin::Item Nav -->
-        <div class="">
-            <div class="nav-item ms-3">
-                <!-- begin:: User Profile (Just for mobile) -->
-                <i class="fa-light fa-circle-user fs-2 align-middle cursor-pointer d-md-none"
-                   id="user-profile-toggler"></i>
-                <div class="d-md-none user-profile-wrapper pt-3">
-                        <span class="user-info">
-                            <span class="email-one-char">L</span>
-                            loremipsum@gmail.com
-                        </span>
-                    <div class="user-profile-items">
-                        <ul class="list-unstyled">
-                            <li><a href="#"><i class="fal fa-home-alt"></i>داشبورد</a></li>
-                            <li><a href="#"><i class="fal fa-cog"></i>تنظیمات</a></li>
-                            <li><a href="#"><i class="fa-regular fa-server"></i>سرویس های فعال</a></li>
-                            <li><a href="#"><i class="fal fa-user-headset"></i>پشتیبانی</a></li>
-                            <li><a href="#"><i class="fa-light fa-arrow-right-from-bracket"></i>خروج</a></li>
-                        </ul>
+<div class="d-flex">
+
+    <!-- begin:: sidenav -->
+    <div class="sidebar">
+        <div class="sidebar-items px-6">
+
+            <!-- begin:: profile -->
+            <div class="d-none d-md-flex flex-row min-h-16 align-items-center">
+                <div class="ms-2">
+                    <div class="w-12 h-12 rounded-circle overflow-hidden bg-info profile-dropdown"  type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="user-profile.png">
+                    </div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">پنل کاربری</a>
+                        <a class="dropdown-item" href="#">سرویس های من</a>
+                        <a class="dropdown-item" href="#">امنیت</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">خروج</a>
                     </div>
                 </div>
-                <!-- end:: User Profile (Just for mobile) -->
-                <!-- begin:: User profile (large breakpoints) -->
-                <i class="fa-light fa-circle-user fs-2 align-middle cursor-pointer d-none d-md-inline"
-                   data-bs-toggle="dropdown"
-                   aria-label="Open user menu" aria-expanded="false"></i>
-                <div class="dropdown-menu">
-                    <a href="#" class="dropdown-item"><i class="fal fa-home-alt ms-2"></i>داشبورد</a></a>
-                    <a href="#" class="dropdown-item"><i class="fa-regular fa-server ms-2"></i>سرویس های فعال</a></a>
-                    <a href="#" class="dropdown-item"><i class="fal fa-cog ms-2"></i>تنظیمات</a></a>
-                    <a href="#" class="dropdown-item"><i class="fal fa-user-headset ms-2"></i>پشتیبانی</a></a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item"><i
-                            class="fa-light fa-arrow-right-from-bracket ms-2"></i>خروج</a></a>
+                <div class="">
+                    <h5>به کریپتو وی خوش اومدین</h5>
+                    <h6 class="mb-0">شما 7 پیغام نخوانده دارید</h6>
                 </div>
-                <!-- end:: User profile (large breakpoints) -->
+            </div>
+            <!-- end:: profile -->
+
+            <!-- begin:: close menu btn (Small breakpoints) -->
+            <i class="far fa-times close-sidebar my-6 d-md-none"></i>
+            <!-- end:: close menu btn (Small breakpoints) -->
+
+            <!-- begin:: sidebar links -->
+            <ul class="sidebar-nav nav">
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <i class="fas fa-home-lg-alt"></i>
+                        پنل کاربری
+                    </a>
+                </li>
+                <li class="nav-item has-sub">
+                    <a href="" class="nav-link" data-bs-toggle="collapse" role="button" data-bs-target=".sub1">
+                        <i class="fas fa-server"></i>
+                        آیپی ثابت و اختصاصی
+                    </a>
+                    <ul class="sub-items nav collapse sub1">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                خرید آی پی جدید
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                آی پی های فعال
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                               شرایط و قوانین سرویس آی پی ثابت
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-sub">
+                    <a href="" class="nav-link" data-bs-toggle="collapse" role="button" data-bs-target=".sub2">
+                        <i class="fas fa-fingerprint"></i>
+                        خدمات احرازهویت
+                    </a>
+                    <ul class="sub-items nav collapse sub2">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                ثبت سفارش جدید
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                سفارش های فعال
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                شرایط و قوانین احرازهویت
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-sub">
+                    <a href="" class="nav-link" data-bs-toggle="collapse" role="button" data-bs-target=".sub3">
+                        <i class="fas fa-user-headset"></i>
+                        پشتیبانی
+                    </a>
+                    <ul class="sub-items nav collapse sub3">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                ثبت تیکت جدید
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                تیکت های فعال
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                همه ی تیکت ها
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-sub">
+                    <a href="" class="nav-link" data-bs-toggle="collapse" role="button" data-bs-target=".sub4">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        صورت حساب
+                    </a>
+                    <ul class="sub-items nav collapse sub4">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                صورت حساب های پرداخت نشده
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                همه ی صورت حساب ها
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <i class="fas fa-cog"></i>
+                        تنظیمات کاربری
+                    </a>
+                </li>
+            </ul>
+            <!-- end:: sidebar links -->
+
+            <!-- begin:: switcher mode (Small breakpoints) -->
+            <div class="flex-between-center d-md-none">
+                <div class="d-inline-flex opacity-80">
+                    <i class="fas fa-palette font-4 ms-2.5"></i>
+                    <span>حالت شب</span>
+                </div>
+                <div class="switcher-mode-slide">
+                    <div class="switcher-mode-wrapper">
+                        <div class="switcher-toggler">
+                            <i class="fas fa-moon cursor-pointer light-vector"></i>
+                            <i class="sun-light-icon cursor-pointer dark-vector"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end:: switcher mode (Small breakpoints) -->
+
+        </div>
+    </div>
+    <!-- end:: sidenav -->
+
+    <div class="flex-fill w-full">
+
+        <!-- begin:: Top nav -->
+        <header class="dashboard-nav">
+            <div class="container-fluid flex-between-center">
+
+                <!-- begin::Item Nav -->
+                <div class="d-flex align-items-center">
+                    <!-- begin:: menu switcher (Small breakpoints) -->
+                    <i class="far fa-bars ms-5 font-5 d-md-none sidebar-trigger"></i>
+                    <!-- end:: menu switcher (Small breakpoints) -->
+
+                    <!-- begin:: switcher mode (Large breakpoints) -->
+                    <div class="switcher-mode ms-5 d-none d-md-flex switcher-toggler">
+                        <i class="fas fa-moon font-5 cursor-pointer light-vector"></i>
+                        <i class="sun-light-icon cursor-pointer dark-vector"></i>
+                    </div>
+                    <!-- end:: switcher mode (Large breakpoints) -->
+
+                    <!-- begin:: Notifications Toggle -->
+                    <i class="fas fa-bell font-5 cursor-pointer"></i>
+                    <!-- end:: Notifications Toggle -->
+                </div>
+                <!-- end::Item Nav -->
+
+                <!-- begin: logo (Large breakpoint) -->
+                <div class="logo d-none d-md-flex">
+                    <a href="#" class="d-flex">
+                        <img src="logo-text-light.svg" alt="CryptoWayNow" class="light-vector"/>
+                        <img src="logo-text-dark.svg" alt="CryptoWayNow" class="dark-vector"/>
+                    </a>
+                </div>
+                <!-- end:: logo (Large breakpoint) -->
+
+                <!-- begin: logo (Small breakpoint) -->
+                <div class="logo d-md-none">
+                    <a href="#" class="d-flex w-full justify-content-center">
+                        <img src="logo.svg" alt="CryptoWayNow"/>
+                    </a>
+                </div>
+                <!-- end:: logo (Small breakpoint) -->
+
+            </div>
+        </header>
+        <!-- end:: Top nav -->
+
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-fluid">
+                    <div class="row row-cards">
+                        <div class="col-12">
+                            <div class="card">
+                                <!-- begin:: section title -->
+                                <div class="page-header">
+                                    <div class="align-items-center">
+                                        <h2 class="page-title">امنیت حساب کاربری</h2>
+                                    </div>
+                                </div>
+                                <!-- end:: section title -->
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="card">
+                                <!-- begin:: section title -->
+                                <div class="page-header">
+                                    <div class="align-items-center">
+                                        <h2 class="page-title">آخرین تیکت ها</h2>
+                                    </div>
+                                </div>
+                                <!-- end:: section title -->
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <!-- begin:: section title -->
+                                <div class="page-header">
+                                    <div class="align-items-center">
+                                        <h2 class="page-title">امنیت حساب کاربری</h2>
+                                    </div>
+                                </div>
+                                <!-- end:: section title -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- end::Item Nav -->
-        <!-- begin:: LOGO -->
-        <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
-            <a href="#">
-                <img src="Flyvpn-02.svg" alt="flyvpn" class="navbar-brand-image">
-            </a>
-        </h1>
-        <!-- end:: LOGO -->
     </div>
-</header>
+
+</div>
+
+<div class="overlay"></div>
+
 </body>
+<script type='module'>
+    let navTrigger = document.querySelector('.sidebar-trigger')
+    let nav = document.querySelector('.sidebar')
+    let closeBtn = document.querySelector('.close-sidebar')
+    let overlay = document.querySelector('.overlay')
+    let menuLinks = nav.querySelectorAll('.nav-item .nav-link')
+
+    navTrigger.onclick = function () {
+        nav.classList.add('show')
+        overlay.classList.add('show')
+    }
+    closeBtn.onclick = function () {
+        nav.classList.remove('show')
+        overlay.classList.remove('show')
+    }
+    overlay.onclick = function () {
+        nav.classList.remove('show')
+        overlay.classList.remove('show')
+    }
+    /*for (let link of menuLinks) {
+        link.addEventListener('click', function () {
+            nav.classList.remove('show')
+            overlay.classList.remove('show')
+        })
+    }*/
+
+
+
+    // Sidebar
+   /* $('.nav-item.has-sub > .nav-link').click(function (e){
+        e.preventDefault()
+        $(this).siblings('.sub-items').slideToggle()
+        $(this).parent().toggleClass('active')
+    })*/
+</script>
 </html>

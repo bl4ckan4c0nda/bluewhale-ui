@@ -41,8 +41,8 @@ Select group
   text-align: center;
   cursor: pointer;
   user-select: none;
-  border: 1px solid $input-border-color;
-  border-radius: 3px;
+  border: 1px dashed $input-border-color;
+  border-radius: $border-radius-lg;
   @include transition(border-color $transition-time, background $transition-time, color $transition-time);
 
   .icon:only-child {
@@ -84,6 +84,14 @@ Select group
   .form-selectgroup-input[type="radio"]:checked + .form-selectgroup-label & {
     background-image: escape-svg($form-check-radio-checked-bg-image);
   }
+
+
+}
+// Form select group check with custom icon
+.form-selectgroup-check-icon {
+  .form-selectgroup-input:checked + .form-selectgroup-label & {
+    color: $primary;
+  }
 }
 
 .form-selectgroup-check-floated {
@@ -95,7 +103,7 @@ Select group
 .form-selectgroup-input:checked + .form-selectgroup-label {
   z-index: 1;
   color: $primary;
-  background: rgba($primary, .04);
+  background: rgba($primary, .08);
   border-color: $primary;
 }
 
@@ -103,7 +111,7 @@ Select group
   z-index: 2;
   color: $primary;
   border-color: $primary;
-  box-shadow: $input-btn-focus-box-shadow;
+  box-shadow: none;
 }
 
 .form-selectgroup-label-content {
@@ -114,7 +122,7 @@ Alternate version of form select group
  */
 .form-selectgroup-boxes {
   .form-selectgroup-label {
-    text-align: left;
+    text-align: right;
     padding: $card-spacer-x $card-spacer-y;
     color: inherit;
   }
@@ -124,7 +132,7 @@ Alternate version of form select group
       color: inherit;
 
       .form-selectgroup-title {
-        color: $primary;
+        color: inherit;
       }
 
       .form-selectgroup-label-content {

@@ -1,5 +1,6 @@
 .nav {
   margin: 0;
+  padding: 0;
 }
 
 .nav-vertical {
@@ -65,6 +66,11 @@
   display: flex;
   @include transition(color $transition-time);
   align-items: center;
+  font-size: $nav-link-font-size;
+  font-weight: $nav-link-font-weight;
+  @include dark-mode {
+    color: $dark-mode-nav-link-color;
+  }
 }
 
 .nav-link-toggle {

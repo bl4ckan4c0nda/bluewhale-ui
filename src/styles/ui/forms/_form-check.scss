@@ -23,11 +23,18 @@ Form check
   .form-switch & {
     @include transition(background-color$transition-time, background-position $transition-time);
   }
+  &.check-input-lg {
+    width: $form-check-input-width-lg !important;
+    height: $form-check-input-width-lg !important;
+    background-size: $form-check-input-width-lg !important;
+  }
 }
 
 .form-check-label {
   display: block;
-
+  &.check-label-lg {
+    padding: $form-check-label-lg-padding-top $form-check-label-lg-padding-right;
+  }
   &.required {
     &:after {
       content: "*";

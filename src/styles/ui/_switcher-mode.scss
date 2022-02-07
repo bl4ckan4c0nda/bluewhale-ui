@@ -1,0 +1,106 @@
+@mixin switcher-mode-color(
+  $bg-color:$switcher-bg-light,
+  $icon-color:$switcher-icon-light,
+  $toggler-color: $switcher-toggler-light,
+  $border-color: $switcher-border-light
+) {
+  .switcher-mode-wrapper{
+    background: $bg-color;
+  }
+  .switcher-toggler {
+    color: $icon-color;
+
+    &:before {
+      background: $toggler-color;
+    }
+  }
+
+}
+
+@mixin switcher-mode-color-dark {
+  @include switcher-mode-color($switcher-bg-dark, $switcher-icon-dark, $switcher-toggler-dark)
+}
+
+
+.switcher-mode-slide {
+  @include switcher-mode-color();
+  @include dark-mode {
+    @include switcher-mode-color-dark()
+  }
+  width: 40px;
+  height: 24px;
+
+  .switcher-mode-wrapper {
+    display: flex;
+    justify-content: center;
+    border-radius: 999px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .switcher-toggler {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+
+
+      &:before {
+        content: "";
+        box-shadow: rgb(20 21 26 / 4%) 0px 1px 2px, rgb(71 77 87 / 4%) 0px 3px 6px, rgb(20 21 26 / 10%) 0px 0px 1px;
+        width: 18px;
+        height: 18px;
+        border-radius: 999px;
+        position: absolute;
+        z-index: 1;
+        transform: translateX(8px);
+        @include transition($transition-time);
+      }
+
+      > i {
+        z-index: 2;
+        position: absolute;
+        color: rgb(112, 122, 138);
+      }
+      > i.sun-light-icon {
+        width: 14px;
+        height: 14px;
+        background-size: 14px 14px;
+        filter: invert(50%);
+      }
+      & > i.dark-vector {
+        display: block !important;
+        right: 5px;
+      }
+      & > i.light-vector {
+        display: none !important;
+      }
+
+      &.dark > i.dark-vector {
+        display: none !important;
+      }
+      &.dark > i.light-vector {
+        display: block !important;
+        left: 5px;
+      }
+
+      &.dark:before {
+        @include transition($transition-time);
+        transform: translateX(-8px);
+      }
+    }
+  }
+}
+/*@include media-breakpoint-down(sm) {
+  .switcher-mode-slide {
+    .switcher-mode-wrapper {
+      width: 33%;
+    }
+  }
+}*/
+/*.switcher-mode-slide {
+  display: flex;
+  margin-left: $switcher-mode-margin-left;
+}*/
+

@@ -141,8 +141,9 @@
 Navbar
  */
 .navbar {
-  align-items: stretch;
+  align-items: center;
   min-height: $navbar-height;
+  justify-content: flex-start;
 
   .navbar-collapse & {
     flex-grow: 1;

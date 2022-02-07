@@ -1,6 +1,40 @@
 body {
   direction: $direction-rtl;
 }
-.cursor-pointer {
-  cursor: pointer;
+.flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.theme-light .dark-vector {
+  display: none !important;
+}
+.theme-dark .light-vector {
+  display: none !important;
+}
+.sun-light-icon {
+  display: block;
+  text-indent: -9999px;
+  width: 20px;
+  height: 20px;
+  background: url('images/sun-light-icon.svg');
+  background-size: 20px 20px;
+  filter: invert(100%);
+}
+// Icon in link tag
+a {
+    i {
+    color: $icon-link-color;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgb(0 0 0 / 50%);
+  z-index: 99;
+  visibility: hidden;
 }

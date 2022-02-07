@@ -7,7 +7,7 @@
   user-select: none;
   border: 1px solid transparent;
   min-width: ($badge-padding-y * 2 ) + ($badge-font-size / 100% * 1em);
-  font-weight: $headings-font-weight;
+  font-weight: $badge-font-weight;
   letter-spacing: .04em;
 
   @at-root a#{&} {

@@ -70,10 +70,40 @@ module.exports = merge(common, {
             filename: 'login.html'
         }),
         new HtmlWebpackPlugin({
+            template: paths.src + '/pages/auth/register.html',
+            inject: true,
+            chunks: ['main'],
+            filename: 'register.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: paths.src + '/pages/auth/verifyemail.html',
+            inject: true,
+            chunks: ['main'],
+            filename: 'verifyemail.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: paths.src + '/pages/auth/reset-password.html',
+            inject: true,
+            chunks: ['main'],
+            filename: 'reset-password.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: paths.src + '/pages/auth/reset-security.html',
+            inject: true,
+            chunks: ['main'],
+            filename: 'reset-security.html'
+        }),
+        new HtmlWebpackPlugin({
             template: paths.src + '/pages/layouts/dashboard-sidebar.html',
             inject: true,
             chunks: ['main'],
             filename: 'dashboard-sidebar.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: paths.src + '/pages/layouts/settings.html',
+            inject: true,
+            chunks: ['main'],
+            filename: 'settings.html'
         }),
     ]
 })

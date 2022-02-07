@@ -1,0 +1,208 @@
+@mixin sidenav-color(
+  $bg-color: white,
+  $border-color: $navbar-light-border-color,
+  $link-hover-color: $primary,
+  $link-hover-bg-color: $dropdown-link-hover-bg,
+  $link-active-color: $dropdown-dark-link-active-color,
+  $link-active-bg-color: $dropdown-link-active-bg,
+  $icon-active-color: $primary,
+  $icon-active-bg-color: white
+) {
+  background: $bg-color;
+  .nav-link {
+    &:hover {
+
+    }
+
+    &:focus {
+
+    }
+
+    &:hover .nav-link-icon,
+    &:focus .nav-link-icon {
+
+    }
+  }
+}
+
+@mixin sidenav-dark {
+  @include sidenav-color($dark-mode-dark, $navbar-dark-border-color, $navbar-dark-color, $blue-gradient-dark,$nav-link-color, $blue-gradient-dark-darken);
+}
+
+.sidebar {
+  @include sidenav-color();
+  @include dark-mode {
+    @include sidenav-dark()
+  }
+  &.show {
+    right: 0;
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+  }
+  position: fixed;
+  width: 100%;
+  max-width: 375px;
+  inset: 0;
+  z-index: 9999;
+  height: 100%;
+  right: -100%;
+  transition-property: all;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  .sidebar-items {
+    max-width: inherit;
+    width: 100%;
+    padding-bottom: 32px;
+    .close-sidebar {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 24px;
+    }
+    .sidebar-nav {
+      flex-direction: column;
+      line-height: 3;
+      .nav-item {
+
+        margin-bottom: 16px;
+        position: relative;
+
+        &.has-sub:before {
+          content: '\f078';
+          font-family: 'Font Awesome 5 Pro';
+          position: absolute;
+          left: 0;
+          font-size: 12px;
+          }
+
+        &.active.has-sub:before {
+          color: $primary;
+          transform: rotate(180deg);
+        }
+
+        &.active {
+          & > .nav-link {
+            color: $primary !important;
+            opacity: 1;
+            &:hover {
+              color: $primary;
+            }
+          }
+          .sub-items {
+
+          }
+        }
+
+        .nav-link {
+          padding: 0;
+          font-size: 12px;
+          font-weight: 700;
+          display: inline-flex;
+          opacity: 0.8;
+          &:hover,
+          &:focus {
+            opacity: 1;
+            color: inherit;
+          }
+          i {
+            font-size: 1rem;
+            margin-left: 10px;
+          }
+        }
+
+        .sub-items {
+          flex-direction: column;
+          padding-right: 1.5rem;
+          overflow: hidden;
+          flex-wrap: nowrap;
+          .nav-item {
+            margin-bottom: 0;
+            .nav-link {
+              &:hover {
+                color: $primary;
+              }
+              i {
+                font-size: 0.5rem;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
+/*}
+.sidenav {
+  @include sidenav-color();
+  @include dark-mode {
+    @include sidenav-dark();
+  }
+  width: 330px;
+  height: 100vh;
+  .sidenav-nav {
+    margin: 20px 0;
+    list-style: none;
+    padding: 0 20px;
+    .nav-item {
+      .nav-link {
+        border-radius: 15px;
+        padding: 1rem 0.75rem;
+        .nav-link-icon {
+          border-radius: 5px;
+          margin-right: 0;
+          width: inherit;
+          height: inherit;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}*/
+
+/* Breakpoints */
+
+@include media-breakpoint-up(sm) {
+  .sidebar {
+    max-width: 300px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .sidebar {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    right: 0;
+    @include sidenav-color(white, $navbar-light-border-color, $primary, $blue-gradient, $dropdown-dark-link-active-color,$blue-gradient-darken);
+    .sidebar-nav {
+      margin-top: 40px;
+      .sidebar-items {
+        .close-sidebar {
+          display: none;
+        }
+        .nav-item {
+          .nav-link {
+
+            .nav-link-icon {
+              margin-right: 0;
+              width: inherit;
+              height: inherit;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@include media-breakpoint-up(lg) {
+}
+
+@include media-breakpoint-up(xl) {
+}
+
+@include media-breakpoint-up(xxl) {
+}

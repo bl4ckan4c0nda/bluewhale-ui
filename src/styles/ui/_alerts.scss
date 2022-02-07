@@ -1,12 +1,15 @@
 .alert {
   --#{$variable-prefix}alert-color: #{$text-muted};
-  background: $white;
-  border: $alert-border-width solid $alert-border-color;
-  border-left: .25rem solid var(--#{$variable-prefix}alert-color);
+  background: var(--#{$variable-prefix}alert-color-interactive);
+  border: $alert-border-width solid var(--#{$variable-prefix}alert-border-color);
+  //border-left: .25rem solid var(--#{$variable-prefix}alert-color);
   box-shadow: $alert-shadow;
-
+  display: flex;
   >:last-child {
     margin-bottom: 0;
+  }
+  i {
+    color: var(--#{$variable-prefix}alert-color);
   }
 }
 
@@ -35,6 +38,8 @@
 @each $state, $value in $theme-colors {
   .alert-#{$state} {
     --#{$variable-prefix}alert-color: #{$value};
+    --#{$variable-prefix}alert-color-interactive: #{lighten($value,44%)};
+    --#{$variable-prefix}alert-border-color: #{lighten($value,17%)};
   }
 }
 

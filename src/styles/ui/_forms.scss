@@ -56,6 +56,15 @@ Form hint
 Form control
  */
 .form-control {
+  &:focus {
+    box-shadow: none;
+    @include dark-mode {
+      border: $input-border-width solid $dark-mode-border-hover-color;
+    }
+  }
+  &::placeholder {
+    text-align: right;
+  }
   direction: $direction-ltr;
   &:-webkit-autofill {
     box-shadow: 0 0 0 1000px var(--#{$variable-prefix}body-bg) inset;
@@ -218,4 +227,28 @@ Upload files
 .form-file-button {
   margin-left: 0;
   border-left: 0;
+}
+
+/*
+ Password input with hide and show
+*/
+.password-group {
+  display: flex;
+  position: relative;
+  .hide-show-trigger {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 15px;
+    color: $hide-show-password-icon-color;
+    font-size: 1.3rem;
+    @include dark-mode {
+      color: $hide-show-password-icon-color-dark;
+    }
+    &.show:before {
+      content: '\f06e';
+    }
+  }
 }

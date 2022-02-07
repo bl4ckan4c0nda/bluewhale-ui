@@ -1,0 +1,32 @@
+.tickets-status {
+  padding: $content-padding-y 0;
+
+  .tickets-status-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: $login-history-border;
+    padding-bottom: 1rem;
+    align-items: center;
+
+    a {
+      font-size: $font-size-base;
+      text-decoration: none;
+    }
+
+    .badge {
+      font-size: 0.625rem;
+      min-width: 5.5rem;
+      padding: 0.5em 0.5em;
+      border-radius: 10px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      border-width: 0;
+      padding-bottom: 0;
+    }
+  }
+}

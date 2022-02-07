@@ -10,7 +10,8 @@
 
 .card {
   box-shadow: $card-shadow;
-  border: $card-border-width solid $card-border-color;
+  //border: $card-border-width solid $card-border-color;
+  border: none;
   background: var(--#{$variable-prefix}card-bg, #{$card-bg});
 
   @media print {
@@ -27,6 +28,8 @@
       box-shadow: $card-shadow-hover;
     }
   }
+  @include border-radius($card-border-radius);
+  padding: 0 $card-cap-padding-x;
 }
 
 
@@ -365,6 +368,12 @@ Card table
           border-top: 0;
         }
       }
+      th:first-child {
+        border-top-right-radius: $border-radius-xlg;
+      }
+      th:last-child {
+        border-top-left-radius: $border-radius-xlg;
+      }
     }
   }
 
@@ -510,4 +519,20 @@ Card tabs
     margin: 0;
     border-top-left-radius: 0;
   }
+}
+// Custom card
+.custom-card {
+  position: relative;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-radius: 0.625rem;
+  border: 1px solid $card-border-color;
+  padding: 20px;
+}
+// Card with inset box shadow
+.card-shadow-inset {
+  background: darken($light,0.5%);
+  box-shadow: $card-shadow-inset;
 }

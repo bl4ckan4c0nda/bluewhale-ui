@@ -1,0 +1,5 @@
+.theme-dark {
+  .bg-light-gray {
+    background: lighten($dark,10%) !important;
+  }
+}

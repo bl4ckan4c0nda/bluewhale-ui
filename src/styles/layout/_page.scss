@@ -80,7 +80,12 @@
   justify-content: center;
 
   .page-wrapper & {
-    margin: $content-padding-y 0 0;
+    padding: $content-padding-y 0;
+    &.bordered {
+      border-width: 0 0 1px;
+      border-style: solid;
+      border-color: $border-color-transparent;
+    }
   }
 }
 
@@ -95,7 +100,7 @@
 
 .page-title {
   margin: 0;
-  font-size: $h2-font-size;
+  font-size: $h4-font-size;
   line-height: $h2-line-height;
   font-weight: $font-weight-medium;
   color: inherit;
@@ -106,6 +111,14 @@
     width: 1.5rem;
     height: 1.5rem;
     margin-right: .25rem;
+  }
+  &.bordered-title:before {
+    content: "";
+    width: 5px;
+    height: 25px;
+    background: $azure;
+    border-radius: 20px;
+    margin-left: 10px;
   }
 }
 

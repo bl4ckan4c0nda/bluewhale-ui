@@ -1,0 +1,13 @@
+.title-description {
+  display: flex;
+  align-items: center;
+  &.bordered {
+    border-right: 5px solid #20a0f9;
+    padding-right: 10px;
+    border-radius: 8px;
+  }
+  > .page-title{
+    font-weight: 400;
+    line-height: 2;
+  }
+}

@@ -1,0 +1,16 @@
+.form-control {
+
+  &.has-err {
+    border-color: $form-has-error-border-color !important;
+  }
+}
+.input-err-msg {
+  color: $form-has-error-msg-color;
+  padding-top: $form-has-error-msg-padding;
+  font-size: $form-has-error-msg-font-size;
+}
+.form-check {
+  .input-err-msg {
+    margin-right: $form-check-padding-start * -1;
+  }
+}
