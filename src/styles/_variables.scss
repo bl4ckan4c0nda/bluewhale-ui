@@ -21,7 +21,8 @@ $font-family-monospace: $google-font-monospaced, Menlo, Monaco, Consolas, Libera
 $font-family-serif: "Georgia", "Times New Roman", times, serif !default;
 $font-family-IRANSansX: IRANSansX !default;
 $font-family-IRANYekan: IRANYekan !default;
-$font-family-base: $font-family-IRANYekan !default;
+$font-family-IRANYekanfanum: IRANYekan !default;
+$font-family-base: $font-family-IRANYekanfanum !default;
 // EXTERNAL FONTS
 $icon-fonts: () !default;
 
@@ -449,12 +450,12 @@ $breadcrumb-variants: (
 ) !default;
 
 //badges
-$badge-font-size: $code-font-size !default;
+$badge-font-size: map-get($spacers,2\.5) !default;
 $badge-line-height: $code-line-height !default;
-$badge-font-weight: $font-weight-medium !default;
+$badge-font-weight: $font-weight-bold !default;
 $badge-empty-size: .5rem !default;
-$badge-padding-y: .25em !default;
-$badge-padding-x: .5em !default;
+$badge-padding-y: .5em !default;
+$badge-padding-x: 1em !default;
 
 //buttons
 $input-btn-line-height: $line-height-base !default;
@@ -667,14 +668,15 @@ $spinner-border-width-sm: 1px !default;
 
 //tables
 $table-color: inherit !default;
-$table-border-color: $border-color-transparent !default;
+$table-border-color: rgba($black,.08) !default;
 $table-head-border-color: $border-color-transparent !default;
 $table-head-padding-y: .5rem !default;
 $table-head-color: $text-muted !default;
-$table-head-bg: var(--#{$variable-prefix}border-color-light) !default;
+$table-head-bg: var(--#{$variable-prefix}card-bg) !default;
 $table-striped-order: even !default;
 $table-striped-bg: var(--#{$variable-prefix}border-color-light) !default;
 $table-group-separator-color: $border-color-transparent !default;
+$table-cell-padding-y: 1.1rem !default;
 
 //toasts
 $toast-border-color: $border-color !default;

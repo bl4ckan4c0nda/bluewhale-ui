@@ -6,9 +6,11 @@
   overflow: hidden;
   user-select: none;
   border: 1px solid transparent;
-  min-width: ($badge-padding-y * 2 ) + ($badge-font-size / 100% * 1em);
+  //min-width: ($badge-padding-y * 2 ) + ($badge-font-size / 100% * 1em);
   font-weight: $badge-font-weight;
   letter-spacing: .04em;
+  font-size: $badge-font-size;
+  padding: $badge-padding-y $badge-padding-x;
 
   @at-root a#{&} {
     color: $white;
@@ -40,4 +42,8 @@
 
 .badge-pill {
   border-radius: $border-radius-pill;
+}
+.badge-primary {
+  background: rgb(0 114 255 / 24%) !important;
+  color: rgb(0 61 209 / 58%);
 }
