@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>داشبورد</title>
+    <% for (var css in htmlWebpackPlugin.files.css) { %>
+    <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+    <% } %>
+
+</head>
+<body class="theme-light">
+<div class="d-flex">
+
+    <!-- begin:: sidenav -->
+    <div class="sidebar">
+        <div class="sidebar-items px-6">
+
+            <!-- begin:: profile -->
+            <div class="d-none d-md-flex flex-row min-h-16 align-items-center">
+                <div class="ms-2">
+                    <div class="w-12 h-12 rounded-circle overflow-hidden bg-info profile-dropdown" type="button"
+                         id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="user-profile.png">
+                    </div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">پنل کاربری</a>
+                        <a class="dropdown-item" href="#">سرویس های من</a>
+                        <a class="dropdown-item" href="#">امنیت</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">خروج</a>
+                    </div>
+                </div>
+                <div class="">
+                    <h5>به کریپتو وی خوش اومدین</h5>
+                    <h6 class="mb-0">شما 7 پیغام نخوانده دارید</h6>
+                </div>
+            </div>
+            <!-- end:: profile -->
+
+            <!-- begin:: close menu btn (Small breakpoints) -->
+            <i class="far fa-times close-sidebar my-6 d-md-none"></i>
+            <!-- end:: close menu btn (Small breakpoints) -->
+
+            <!-- begin:: sidebar links -->
+            <ul class="sidebar-nav nav">
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <i class="fas fa-home-lg-alt"></i>
+                        پنل کاربری
+                    </a>
+                </li>
+                <li class="nav-item has-sub">
+                    <a href="" class="nav-link" data-bs-toggle="collapse" role="button" data-bs-target=".sub1">
+                        <i class="fas fa-server"></i>
+                        آیپی ثابت و اختصاصی
+                    </a>
+                    <ul class="sub-items nav collapse sub1">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                خرید آی پی جدید
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                آی پی های فعال
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                شرایط و قوانین سرویس آی پی ثابت
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-sub">
+                    <a href="" class="nav-link" data-bs-toggle="collapse" role="button" data-bs-target=".sub2">
+                        <i class="fas fa-fingerprint"></i>
+                        خدمات احرازهویت
+                    </a>
+                    <ul class="sub-items nav collapse sub2">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                ثبت سفارش جدید
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                سفارش های فعال
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                شرایط و قوانین احرازهویت
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-sub">
+                    <a href="" class="nav-link" data-bs-toggle="collapse" role="button" data-bs-target=".sub3">
+                        <i class="fas fa-user-headset"></i>
+                        پشتیبانی
+                    </a>
+                    <ul class="sub-items nav collapse sub3">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                ثبت تیکت جدید
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                تیکت های فعال
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                همه ی تیکت ها
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-sub">
+                    <a href="" class="nav-link" data-bs-toggle="collapse" role="button" data-bs-target=".sub4">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        صورت حساب
+                    </a>
+                    <ul class="sub-items nav collapse sub4">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                صورت حساب های پرداخت نشده
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                همه ی صورت حساب ها
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <i class="fas fa-cog"></i>
+                        تنظیمات کاربری
+                    </a>
+                </li>
+            </ul>
+            <!-- end:: sidebar links -->
+
+            <!-- begin:: switcher mode (Small breakpoints) -->
+            <div class="flex-between-center d-md-none">
+                <div class="d-inline-flex opacity-80">
+                    <i class="fas fa-palette font-4 ms-2.5"></i>
+                    <span>حالت شب</span>
+                </div>
+                <div class="switcher-mode-slide">
+                    <div class="switcher-mode-wrapper">
+                        <div class="switcher-toggler">
+                            <i class="fas fa-moon cursor-pointer light-vector"></i>
+                            <i class="sun-light-icon cursor-pointer dark-vector"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end:: switcher mode (Small breakpoints) -->
+
+        </div>
+    </div>
+    <!-- end:: sidenav -->
+
+    <div class="flex-fill w-full">
+
+        <!-- begin:: Top nav -->
+        <header class="dashboard-nav">
+            <div class="container-fluid flex-between-center">
+
+                <!-- begin::Item Nav -->
+                <div class="d-flex align-items-center">
+                    <!-- begin:: menu switcher (Small breakpoints) -->
+                    <i class="far fa-bars ms-5 font-5 d-md-none sidebar-trigger"></i>
+                    <!-- end:: menu switcher (Small breakpoints) -->
+
+                    <!-- begin:: switcher mode (Large breakpoints) -->
+                    <div class="switcher-mode ms-5 d-none d-md-flex switcher-toggler">
+                        <i class="fas fa-moon font-5 cursor-pointer light-vector"></i>
+                        <i class="sun-light-icon cursor-pointer dark-vector"></i>
+                    </div>
+                    <!-- end:: switcher mode (Large breakpoints) -->
+
+                    <!-- begin:: Notifications Toggle -->
+                    <i class="fas fa-bell font-5 cursor-pointer"></i>
+                    <!-- end:: Notifications Toggle -->
+                </div>
+                <!-- end::Item Nav -->
+
+                <!-- begin: logo (Large breakpoint) -->
+                <div class="logo d-none d-md-flex">
+                    <a href="#" class="d-flex">
+                        <img src="logo-text-light.svg" alt="CryptoWayNow" class="light-vector"/>
+                        <img src="logo-text-dark.svg" alt="CryptoWayNow" class="dark-vector"/>
+                    </a>
+                </div>
+                <!-- end:: logo (Large breakpoint) -->
+
+                <!-- begin: logo (Small breakpoint) -->
+                <div class="logo d-md-none">
+                    <a href="#" class="d-flex w-full justify-content-center">
+                        <img src="logo.svg" alt="CryptoWayNow"/>
+                    </a>
+                </div>
+                <!-- end:: logo (Small breakpoint) -->
+
+            </div>
+        </header>
+        <!-- end:: Top nav -->
+
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-fluid">
+                    <div class="row row-cards">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="col-12 col-md-10 col-lg-8 col-xl-3 mx-auto">
+                                    <form action="">
+
+                                        <!-- begin:: choose your coin -->
+                                        <div class="my-5">
+
+                                            <!-- begin:: Selector Trigger -->
+                                            <span class="form-label">ارز مورد نظر خود را انتخاب کنید</span>
+                                            <div class="currency-selector-trigger" data-bs-toggle="modal"
+                                                 data-bs-target="#select-currency">
+                                                <span class="sub-title"></span>
+                                                <span class="title"></span>
+                                                <span class="symbol"><i class=""></i></span>
+                                                <span class="no-selected-txt">Please choose your coin</span>
+                                            </div>
+                                            <!-- end:: Selector Trigger -->
+
+                                            <!-- begin:: Crypto Selector modal -->
+                                            <div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"
+                                                 id="select-currency">
+                                                <div class="modal-dialog modal-sm modal-dialog-centered"
+                                                     role="document">
+                                                    <div class="modal-content">
+
+                                                        <!-- begin:: Modal header -->
+                                                        <div class="modal-header border-0">
+                                                            <h5 class="modal-title">ارز مورد نظر را انتخاب کنید</h5>
+                                                            <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal"
+                                                                    aria-label="Close"></button>
+                                                        </div>
+                                                        <!-- end:: Modal header -->
+
+                                                        <!-- begin:: Search Crypto Name -->
+                                                        <div class="modal-body py-0">
+                                                            <div class="mb-5">
+                                                                <input type="text" class="form-control"
+                                                                       placeholder="جستجوی ارز"/>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end:: Search Crypto Name -->
+
+                                                        <!-- begin:: POP UP select radio -->
+                                                        <label class="popup-selector-wrapper">
+                                                                <span class="selector-item">
+                                                                    <input type="radio" name="coin" value="1"
+                                                                           class="form-selectgroup-input"
+                                                                           data-symbol="btc" data-coin-short-name="btc"
+                                                                           data-coin-full-name="Bitcoin" checked>
+                                                                    <span class="crypto-selector">
+                                                                        <div class="">
+                                                                            <span class="fa-name">بیتکوین</span>
+                                                                        </div>
+                                                                        <div class="d-flex align-items-center">
+                                                                            <span class="sub-title">Bitcoin</span>
+                                                                            <span class="title">BTC</span>
+                                                                            <i class="symbol btc"></i>
+                                                                        </div>
+
+                                                                    </span>
+                                                                </span>
+                                                            <span class="selector-item">
+                                                                    <input type="radio" name="coin" value="2"
+                                                                           class="form-selectgroup-input"
+                                                                           data-symbol="usdt"
+                                                                           data-coin-short-name="usdt"
+                                                                           data-coin-full-name="TheterUS">
+                                                                <span class="crypto-selector">
+                                                                        <div class="">
+                                                                            <span class="fa-name">تتر</span>
+                                                                        </div>
+                                                                        <div class="d-flex align-items-center">
+                                                                            <span class="sub-title">TheterUS</span>
+                                                                            <span class="title">USDT</span>
+                                                                            <i class="symbol usdt"></i>
+                                                                        </div>
+
+                                                                    </span>
+                                                                </span>
+                                                            <span class="selector-item">
+                                                                    <input type="radio" name="coin" value="3"
+                                                                           class="form-selectgroup-input"
+                                                                           data-symbol="trx" data-coin-short-name="trx"
+                                                                           data-coin-full-name="Tron">
+                                                                <span class="crypto-selector">
+                                                                        <div class="">
+                                                                            <span class="fa-name">ترون</span>
+                                                                        </div>
+                                                                        <div class="d-flex align-items-center">
+                                                                            <span class="sub-title">Tron</span>
+                                                                            <span class="title">TRX</span>
+                                                                            <i class="symbol trx"></i>
+                                                                        </div>
+
+                                                                    </span>
+                                                                </span>
+                                                            <span class="selector-item">
+                                                                    <input type="radio" name="coin" value="4"
+                                                                           class="form-selectgroup-input"
+                                                                           data-symbol="ada" data-coin-short-name="ada"
+                                                                           data-coin-full-name="Cardano">
+                                                                <span class="crypto-selector">
+                                                                        <div class="">
+                                                                            <span class="fa-name">کاردانو</span>
+                                                                        </div>
+                                                                        <div class="d-flex align-items-center">
+                                                                            <span class="sub-title">Cardano</span>
+                                                                            <span class="title">ADA</span>
+                                                                            <i class="symbol ada"></i>
+                                                                        </div>
+
+                                                                    </span>
+                                                                </span>
+                                                        </label>
+                                                        <!-- end:: POP UP select radio -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- end:: Crypto Selector modal -->
+                                        </div>
+                                        <!-- end:: choose your coin -->
+
+                                        <!-- begin:: Total Cost -->
+                                        <div class="mb-5">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="fw-bolder font-4">مقدار قابل پرداخت</div>
+                                                <div class="d-flex flex-row">
+                                                    <span class="symbol fw-bold font-4 ms-1">BTC</span>
+                                                    <span class="amount fw-bold font-4">0.005</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end:: Total Cost -->
+
+                                        <!-- begin:: submit btn -->
+                                        <div class="mb-5">
+                                            <button class="btn btn-lg btn-primary font-7 w-full rounded-2">پرداخت</button>
+                                        </div>
+                                        <!-- end:: submit btn -->
+
+                                        <!-- begin:: cancel or go back -->
+                                        <div class="mb-5 text-center font-4">
+                                            <a href="#">انصراف <i class="fa-solid fa-circle-left"></i></a>
+                                        </div>
+                                        <!-- end:: cancel or go back -->
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="overlay"></div>
+<% for (var js in htmlWebpackPlugin.files.js) { %>
+<script src="<%= htmlWebpackPlugin.files.js[js] %>"></script>
+<% } %>
+</body>
+<script type='module'>
+    let navTrigger = document.querySelector('.sidebar-trigger')
+    let nav = document.querySelector('.sidebar')
+    let closeBtn = document.querySelector('.close-sidebar')
+    let overlay = document.querySelector('.overlay')
+    let menuLinks = nav.querySelectorAll('.nav-item .nav-link')
+
+    navTrigger.onclick = function () {
+        nav.classList.add('show')
+        overlay.classList.add('show')
+    }
+    closeBtn.onclick = function () {
+        nav.classList.remove('show')
+        overlay.classList.remove('show')
+    }
+    overlay.onclick = function () {
+        nav.classList.remove('show')
+        overlay.classList.remove('show')
+    }
+    /*for (let link of menuLinks) {
+        link.addEventListener('click', function () {
+            nav.classList.remove('show')
+            overlay.classList.remove('show')
+        })
+    }*/
+
+
+</script>
+</html>

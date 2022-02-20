@@ -1,0 +1,93 @@
+.currency-selector-trigger {
+  display: flex;
+  justify-content: flex-end;
+  background: $body-bg;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  @include dark-mode {
+    background: $dark-mode-darken;
+  }
+  &:before {
+    content: "\f0d7";
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 900;
+    position: absolute;
+    right: 15px;
+    color: inherit;
+  }
+
+  .title {
+    font-weight: 500;
+  }
+  .sub-title {
+    font-weight: 400;
+  }
+  .title, .sub-title, .no-selected-txt {
+    font-size: 15px;
+    margin-right: 8px;
+    padding-top: 5px;
+  }
+  .symbol {
+    margin-right: 8px;
+  }
+}
+
+/* Crypto Selector */
+.crypto-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.75rem;
+  cursor: pointer;
+
+  .title {
+    font-weight: 500;
+  }
+  .sub-title {
+    font-weight: 400;
+    color: $text-muted;
+  }
+  .title, .sub-title {
+    font-size: 15px;
+    margin-right: 8px;
+    padding-top: 5px;
+  }
+  .symbol {
+    margin-right: 8px;
+  }
+}
+
+
+.popup-selector-wrapper {
+  display: block;
+  min-height: 200px;
+  max-height: 300px;
+  overflow-y: scroll;
+
+  .selector-item {
+    display: block;
+    position: relative;
+
+    .form-selectgroup-input {
+      z-index: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      &:checked + .crypto-selector {
+        background: $body-bg;
+        @include dark-mode {
+          background: $dark-mode-darken;
+        }
+      }
+      &:hover + .crypto-selector {
+        background: $body-bg;
+        @include dark-mode {
+          background: $dark-mode-darken;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>داشبورد</title>
+</head>
+<body class="theme-light">
+<div class="d-flex">
+
+    <!-- begin:: sidenav -->
+    <div class="sidebar">
+        <div class="sidebar-items px-6">
+
+            <!-- begin:: profile -->
+            <div class="d-none d-md-flex flex-row min-h-16 align-items-center">
+                <div class="ms-2">
+                    <div class="w-12 h-12 rounded-circle overflow-hidden bg-info profile-dropdown" type="button"
+                         id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="user-profile.png">
+                    </div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">پنل کاربری</a>
+                        <a class="dropdown-item" href="#">سرویس های من</a>
+                        <a class="dropdown-item" href="#">امنیت</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">خروج</a>
+                    </div>
+                </div>
+                <div class="">
+                    <h5>به کریپتو وی خوش اومدین</h5>
+                    <h6 class="mb-0">شما 7 پیغام نخوانده دارید</h6>
+                </div>
+            </div>
+            <!-- end:: profile -->
+
+            <!-- begin:: close menu btn (Small breakpoints) -->
+            <i class="far fa-times close-sidebar my-6 d-md-none"></i>
+            <!-- end:: close menu btn (Small breakpoints) -->
+
+            <!-- begin:: sidebar links -->
+            <ul class="sidebar-nav nav">
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <i class="fas fa-home-lg-alt"></i>
+                        پنل کاربری
+                    </a>
+                </li>
+                <li class="nav-item has-sub">
+                    <a href="" class="nav-link" data-bs-toggle="collapse" role="button" data-bs-target=".sub1">
+                        <i class="fas fa-server"></i>
+                        آیپی ثابت و اختصاصی
+                    </a>
+                    <ul class="sub-items nav collapse sub1">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                خرید آی پی جدید
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                آی پی های فعال
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                شرایط و قوانین سرویس آی پی ثابت
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-sub">
+                    <a href="" class="nav-link" data-bs-toggle="collapse" role="button" data-bs-target=".sub2">
+                        <i class="fas fa-fingerprint"></i>
+                        خدمات احرازهویت
+                    </a>
+                    <ul class="sub-items nav collapse sub2">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                ثبت سفارش جدید
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                سفارش های فعال
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                شرایط و قوانین احرازهویت
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-sub">
+                    <a href="" class="nav-link" data-bs-toggle="collapse" role="button" data-bs-target=".sub3">
+                        <i class="fas fa-user-headset"></i>
+                        پشتیبانی
+                    </a>
+                    <ul class="sub-items nav collapse sub3">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                ثبت تیکت جدید
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                تیکت های فعال
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                همه ی تیکت ها
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-sub">
+                    <a href="" class="nav-link" data-bs-toggle="collapse" role="button" data-bs-target=".sub4">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        صورت حساب
+                    </a>
+                    <ul class="sub-items nav collapse sub4">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                صورت حساب های پرداخت نشده
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle"></i>
+                                همه ی صورت حساب ها
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <i class="fas fa-cog"></i>
+                        تنظیمات کاربری
+                    </a>
+                </li>
+            </ul>
+            <!-- end:: sidebar links -->
+
+            <!-- begin:: switcher mode (Small breakpoints) -->
+            <div class="flex-between-center d-md-none">
+                <div class="d-inline-flex opacity-80">
+                    <i class="fas fa-palette font-4 ms-2.5"></i>
+                    <span>حالت شب</span>
+                </div>
+                <div class="switcher-mode-slide">
+                    <div class="switcher-mode-wrapper">
+                        <div class="switcher-toggler">
+                            <i class="fas fa-moon cursor-pointer light-vector"></i>
+                            <i class="sun-light-icon cursor-pointer dark-vector"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end:: switcher mode (Small breakpoints) -->
+
+        </div>
+    </div>
+    <!-- end:: sidenav -->
+
+    <div class="flex-fill w-full">
+
+        <!-- begin:: Top nav -->
+        <header class="dashboard-nav">
+            <div class="container-fluid flex-between-center">
+
+                <!-- begin::Item Nav -->
+                <div class="d-flex align-items-center">
+                    <!-- begin:: menu switcher (Small breakpoints) -->
+                    <i class="far fa-bars ms-5 font-5 d-md-none sidebar-trigger"></i>
+                    <!-- end:: menu switcher (Small breakpoints) -->
+
+                    <!-- begin:: switcher mode (Large breakpoints) -->
+                    <div class="switcher-mode ms-5 d-none d-md-flex switcher-toggler">
+                        <i class="fas fa-moon font-5 cursor-pointer light-vector"></i>
+                        <i class="sun-light-icon cursor-pointer dark-vector"></i>
+                    </div>
+                    <!-- end:: switcher mode (Large breakpoints) -->
+
+                    <!-- begin:: Notifications Toggle -->
+                    <i class="fas fa-bell font-5 cursor-pointer"></i>
+                    <!-- end:: Notifications Toggle -->
+                </div>
+                <!-- end::Item Nav -->
+
+                <!-- begin: logo (Large breakpoint) -->
+                <div class="logo d-none d-md-flex">
+                    <a href="#" class="d-flex">
+                        <img src="logo-text-light.svg" alt="CryptoWayNow" class="light-vector"/>
+                        <img src="logo-text-dark.svg" alt="CryptoWayNow" class="dark-vector"/>
+                    </a>
+                </div>
+                <!-- end:: logo (Large breakpoint) -->
+
+                <!-- begin: logo (Small breakpoint) -->
+                <div class="logo d-md-none">
+                    <a href="#" class="d-flex w-full justify-content-center">
+                        <img src="logo.svg" alt="CryptoWayNow"/>
+                    </a>
+                </div>
+                <!-- end:: logo (Small breakpoint) -->
+
+            </div>
+        </header>
+        <!-- end:: Top nav -->
+
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-fluid">
+                    <div class="row row-cards">
+                        <div class="col-12">
+                            <div class="card">
+
+                                <!-- begin:: section title -->
+                                <div class="page-header">
+                                    <div class="align-items-center">
+                                        <h2 class="page-title justify-content-center font-6 text-center">خرید آیپی ثابت اختصاصی و نیمه اختصاصی</h2>
+                                    </div>
+                                </div>
+                                <!-- end:: section title -->
+
+                                <div class="col-12 col-md-10 col-lg-8 col-xl-4 mx-auto">
+                                    <form action="">
+
+                                        <!-- begin:: dedicate or semi-dedicate selector -->
+                                        <div class="mb-5">
+                                            <div class="col-9 col-md-8 col-lg-6 col-xl-5 mx-auto">
+                                                <div class="dedicate-selector">
+                                                    <label class="form-selectgroup-item">
+                                                        <input type="radio" name="dedicate" value="1"
+                                                               id="dedicate-inp" class="form-selectgroup-input dedicate-selector-input" checked>
+                                                        <span class="text">اختصاصی</span>
+                                                    </label>
+                                                    <label class="form-selectgroup-item">
+                                                        <input type="radio" name="dedicate" value="2"
+                                                               id="semiDedicate-inp" class="form-selectgroup-input dedicate-selector-input">
+                                                        <span class="text">نیمه اختصاصی</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end:: dedicate or semi-dedicate selector -->
+
+                                        <!-- begin:: plan user count selector -->
+                                        <div class="mb-5">
+                                            <div class="col-lg-12">
+                                                <label class="form-selectgroup-item mb-5">
+                                                    <input type="radio" name="planUserCount" value="1"
+                                                           class="form-selectgroup-input" checked>
+                                                    <span class="ip-plan-selector-item">
+                                                        <span class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+                                                            <i class="d-none d-lg-block fa-solid fa-circle-check selector-icon"></i>
+                                                            <span class="service-title">آیپی ثابت و <span class="dedicate-txt-auto-replace"></span></span>
+                                                            <span class="service-badge">تک کاربره</span>
+                                                        </span>
+                                                        <span class="price-wrap">
+                                                            <span class="font-4">ماهانه</span>
+                                                            <span class="font-6">$<span class="p-price font-8 fw-bold ps-1"></span></span>
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <label class="form-selectgroup-item mb-5">
+                                                    <input type="radio" name="planUserCount" value="2"
+                                                           class="form-selectgroup-input">
+                                                    <span class="ip-plan-selector-item">
+                                                        <span class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+                                                            <i class="d-none d-lg-block fa-solid fa-circle-check selector-icon"></i>
+                                                            <span class="service-title">آیپی ثابت و <span class="dedicate-txt-auto-replace"></span></span>
+                                                            <span class="service-badge">دو کاربره</span>
+                                                        </span>
+                                                        <span class="price-wrap">
+                                                            <span class="font-4">ماهانه</span>
+                                                            <span class="font-6">$<span class="p-price font-8 fw-bold ps-1"></span></span>
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <label class="form-selectgroup-item mb-5">
+                                                    <input type="radio" name="planUserCount" value="3"
+                                                           class="form-selectgroup-input">
+                                                    <span class="ip-plan-selector-item">
+                                                        <span class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+                                                            <i class="d-none d-lg-block fa-solid fa-circle-check selector-icon"></i>
+                                                            <span class="service-title">آیپی ثابت و <span class="dedicate-txt-auto-replace"></span></span>
+                                                            <span class="service-badge">سه کاربره</span>
+                                                        </span>
+                                                        <span class="price-wrap">
+                                                            <span class="font-4">ماهانه</span>
+                                                            <span class="font-6">$<span class="p-price font-8 fw-bold ps-1"></span></span>
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- end:: plan user count selector -->
+
+                                        <!-- begin:: plan month selector -->
+                                        <div class="mb-5 row">
+                                            <div class="col-4">
+                                                <label class="form-selectgroup-item">
+                                                    <input type="radio" name="planTime" value="1"
+                                                           class="form-selectgroup-input" checked>
+                                                    <span class="plan-time-selector">
+                                                        <span class="font-9 fw-bolder">1</span>
+                                                        <span class="font-6">ماهه</span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="col-4">
+                                                <label class="form-selectgroup-item">
+                                                    <input type="radio" name="planTime" value="2"
+                                                           class="form-selectgroup-input">
+                                                    <span class="plan-time-selector">
+                                                        <span class="font-9 fw-bolder">2</span>
+                                                        <span class="font-6">ماهه</span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="col-4">
+                                                <label class="form-selectgroup-item">
+                                                    <input type="radio" name="planTime" value="3"
+                                                           class="form-selectgroup-input">
+                                                    <span class="plan-time-selector">
+                                                        <span class="font-9 fw-bolder">3</span>
+                                                        <span class="font-6">ماهه</span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- end:: plan month selector -->
+
+                                        <!-- begin:: submit btn -->
+                                        <div class="mb-5">
+                                            <button class="btn btn-primary font-7 w-full rounded-3">پرداخت</button>
+                                        </div>
+                                        <!-- end:: submit btn -->
+
+                                        <!-- begin:: cancel or go back -->
+                                        <div class="mb-5 text-center font-4">
+                                            <a href="#">انصراف <i class="fa-solid fa-circle-left"></i></a>
+                                        </div>
+                                        <!-- end:: cancel or go back -->
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="overlay"></div>
+
+</body>
+<script type='module'>
+    let navTrigger = document.querySelector('.sidebar-trigger')
+    let nav = document.querySelector('.sidebar')
+    let closeBtn = document.querySelector('.close-sidebar')
+    let overlay = document.querySelector('.overlay')
+    let menuLinks = nav.querySelectorAll('.nav-item .nav-link')
+
+    navTrigger.onclick = function () {
+        nav.classList.add('show')
+        overlay.classList.add('show')
+    }
+    closeBtn.onclick = function () {
+        nav.classList.remove('show')
+        overlay.classList.remove('show')
+    }
+    overlay.onclick = function () {
+        nav.classList.remove('show')
+        overlay.classList.remove('show')
+    }
+    /*for (let link of menuLinks) {
+        link.addEventListener('click', function () {
+            nav.classList.remove('show')
+            overlay.classList.remove('show')
+        })
+    }*/
+
+    /* IP plan selector js */
+    const dedicateInput = document.getElementById('dedicate-inp')
+    const semiDedicateInput = document.getElementById('semiDedicate-inp')
+    const dedicateTextReplacement = document.querySelectorAll('.dedicate-txt-auto-replace')
+    const dedicateSelector = document.querySelectorAll('.dedicate-selector .text')
+    const planPrices = document.querySelectorAll('.p-price')
+    const prices = {
+        'dedicate': {
+            0: 5,
+            1: 8,
+            2: 12
+        },
+        'semiDedicate': {
+            0: 3.5,
+            1: 6,
+            2: 10
+        }
+    }
+    function changeToDedicateText(el) {
+        for(let e of el) e.innerHTML = "اختصاصی"
+    }
+
+    function changeToSemiDedicateText(el) {
+        for(let e of el) e.innerHTML = "نیمه اختصاصی"
+    }
+
+    function changeToDedicatePrice(el){
+        for(let i=0;i<=2;i++) {
+            el[i].innerHTML = prices.dedicate[i]
+        }
+    }
+    function changeToSemiDedicatePrice(el){
+        for(let i=0;i<=2;i++) {
+            el[i].innerHTML = prices.semiDedicate[i]
+        }
+    }
+
+    if(dedicateInput.checked) {
+        changeToDedicateText(dedicateTextReplacement)
+        changeToDedicatePrice(planPrices)
+    }
+
+    if(semiDedicateInput.checked) {
+        changeToSemiDedicateText(dedicateTextReplacement)
+        changeToSemiDedicatePrice(planPrices)
+    }
+
+    dedicateSelector[0].onclick = () => {
+        changeToDedicateText(dedicateTextReplacement)
+        changeToDedicatePrice(planPrices)
+    }
+
+    dedicateSelector[1].onclick = () => {
+        changeToSemiDedicateText(dedicateTextReplacement)
+        changeToSemiDedicatePrice(planPrices)
+    }
+
+</script>
+</html>
