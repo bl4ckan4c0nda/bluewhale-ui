@@ -63,6 +63,7 @@ Form control
     }
   }
   &::placeholder {
+    font-size: $input-placeholder-fontsize;
     text-align: right;
   }
   direction: $direction-ltr;

@@ -1,4 +1,10 @@
 .table {
+  @include dark-mode {
+    border-color: $table-border-color-dark;
+  }
+  > :not(caption) > * > * {
+    white-space: nowrap;
+  }
   thead {
     th {
       color: $table-head-color;
@@ -12,6 +18,15 @@
       }
     }
   }
+  tbody {
+    tr {
+      td {
+        vertical-align: middle;
+        font-weight: 600;
+        font-size: .75rem;
+      }
+    }
+  }
 
   >:not(:first-child) {
     border-top-width: $table-border-width;
@@ -21,7 +36,7 @@
     font-size: 12px;
     letter-spacing: 1px;
     font-weight: $font-weight-bold;
-    color: $text-muted;
+    color: $text-muted-dark;
   }
 }
 

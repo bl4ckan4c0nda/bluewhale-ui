@@ -1,5 +1,5 @@
 const {merge} = require('webpack-merge')
-
+var webpack = require("webpack");
 const common = require('./webpack.common')
 const paths = require('./paths')
 const HtmlWebpackPlugin = require("html-webpack-plugin")
@@ -105,5 +105,22 @@ module.exports = merge(common, {
             chunks: ['main'],
             filename: 'settings.html'
         }),
+        new HtmlWebpackPlugin({
+            template: paths.src + '/pages/layouts/buy-ip.html',
+            inject: true,
+            chunks: ['main'],
+            filename: 'buy-ip.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: paths.src + '/pages/layouts/ip-order.html',
+            inject: false,
+            chunks: ['main'],
+            filename: 'ip-order.html'
+        }),
+
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
     ]
 })

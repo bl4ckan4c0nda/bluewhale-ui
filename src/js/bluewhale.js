@@ -1,5 +1,8 @@
 import jQuery from "jquery";
 window.$ = window.jQuery = jQuery;
+
+import * as bootstrap from 'bootstrap';
+window.bootstrap = bootstrap;
 //Vendor
 import './src/clipboard'
 import './src/dropdown';
@@ -13,9 +16,9 @@ import './src/toast';
 import './src/switcher-mode'
 import './src/wizard'
 import './src/toggle-password'
+import './src/crypto-selector'
 
-import * as bootstrap from 'bootstrap';
-window.bootstrap = bootstrap;
+
 
 EnableActivationTabsFromLocationHash();
 

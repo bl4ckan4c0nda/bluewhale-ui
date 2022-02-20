@@ -92,6 +92,7 @@ $border-light-opacity: .08 !default;
 $border-dark-opacity: .24 !default;
 $border-active-opacity: .48 !default;
 
+
 $gray-50: #fafbfc !default;
 $gray-100: #f1f5f9 !default;
 $gray-200: #e2e8f0 !default;
@@ -134,7 +135,9 @@ $text-muted: mix($body-color, #ffffff, percentage($text-muted-opacity)) !default
 $text-muted-light: mix($body-color, #ffffff, percentage($text-muted-light-opacity)) !default;
 $text-muted-dark: mix($body-color, #ffffff, percentage($text-muted-dark-opacity)) !default;
 
-$border-color: mix($text-muted, #ffffff, percentage($border-opacity)) !default;
+$border-color: rgba($black,.08) !default;
+$border-color-dark: rgba($white,.08) !default;
+//$border-color: mix($text-muted, #ffffff, percentage($border-opacity)) !default;
 $border-color-transparent: rgba($text-muted, $border-opacity) !default;
 
 $border-color-light: mix($text-muted, #ffffff, percentage($border-light-opacity)) !default;
@@ -251,7 +254,7 @@ $avatar-border-radius: $border-radius !default;
 $avatar-font-size: $h4-font-size;
 
 $link-decoration: none !default;
-$link-hover-decoration: underline !default;
+$link-hover-decoration: none !default;
 
 //Typography
 $headings-font-weight: $font-weight-bold !default;
@@ -403,7 +406,7 @@ $border-widths: (
         5: 5px
 ) !default;
 
-$border-color:                $gray-300 !default;
+//$border-color:                $gray-300 !default;
 // scss-docs-end border-variables
 
 // Shadows
@@ -416,7 +419,7 @@ $transition-time: .3s !default;
 $overlay-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .6) 100%) !default;
 
 // scss-docs-start form-input-variables
-$input-border-width: map-get($border-widths,2) !default;
+$input-border-width: map-get($border-widths,1) !default;
 // scss-docs-end form-input-variables
 
 
@@ -552,8 +555,8 @@ $list-group-item-padding-y: $card-cap-padding-y !default;
 $list-group-item-padding-x: $card-cap-padding-x !default;
 
 //modals
-$modal-backdrop-opacity: .24 !default;
-$modal-backdrop-bg: $dark !default;
+$modal-backdrop-opacity: .5 !default;
+$modal-backdrop-bg: $black !default;
 $modal-backdrop-blur: 4px !default;
 
 $modal-fade-transform: translate(0, -1rem) !default;
@@ -669,6 +672,7 @@ $spinner-border-width-sm: 1px !default;
 //tables
 $table-color: inherit !default;
 $table-border-color: rgba($black,.08) !default;
+$table-border-color-dark: rgba($white,.08) !default;
 $table-head-border-color: $border-color-transparent !default;
 $table-head-padding-y: .5rem !default;
 $table-head-color: $text-muted !default;
@@ -696,15 +700,17 @@ $list-group-bg: inherit !default;
 
 $input-bg: $white !default;
 $input-disabled-bg: $gray-100 !default;
-$input-border-color: $border-color-dark !default;
+$input-border-color:  rgba($black,10%) !default;
 $input-border-color-transparent: $border-color-dark-transparent !default;
 $input-placeholder-color: $text-muted-light !default;
+$input-placeholder-fontsize: .75rem !default;
 
 $input-group-addon-bg: $light !default;
 $input-group-addon-color: $text-muted !default;
 
 $input-border-radius: $border-radius-lg !default;
 
+$input-padding-y: .6rem !default;
 
 //Forms
 $form-check-margin-bottom: .5rem !default;

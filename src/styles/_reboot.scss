@@ -21,12 +21,20 @@ body {
   background-size: 20px 20px;
   filter: invert(100%);
 }
-// Icon in link tag
+// Links
 a {
     i {
     color: $icon-link-color;
   }
+  &.number {
+    &:hover {
+      color: $link-hover-color;
+      text-decoration: underline;
+    }
+  }
 }
+
+
 
 .backdrop {
   position: fixed;
