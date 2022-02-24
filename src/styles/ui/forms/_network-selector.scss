@@ -1,0 +1,63 @@
+.network-selector-trigger {
+  .title {
+    font-weight: 500;
+  }
+
+  .sub-title {
+    font-weight: 400;
+    margin-right: 5px !important;
+    color: rgba($body-color,.8);
+    @include dark-mode {
+      color: rgba($white,.4);
+    }
+  }
+
+  .title, .sub-title, .no-selected-txt {
+    font-size: 15px;
+    margin-right: 8px;
+    padding-top: 5px;
+  }
+}
+
+.network-selector-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.75rem;
+  cursor: pointer;
+  border-bottom: 1px solid $border-color;
+  @include dark-mode {
+    border-bottom: 1px solid $border-color-dark;
+  }
+
+  .title {
+    font-weight: 500;
+  }
+
+  .sub-title {
+    font-weight: 400;
+    color: $text-muted;
+  }
+
+  .title, .sub-title {
+    font-size: 15px;
+    margin-right: 8px;
+    padding-top: 5px;
+  }
+
+  .arrival-time, .fee {
+    color: $text-muted;
+    > span {
+    color: $body-color;
+      @include dark-mode {
+        color: $white;
+      }
+    }
+  }
+  .fee {
+    > span {
+      display: inline-block;
+      direction: ltr;
+    }
+  }
+
+}

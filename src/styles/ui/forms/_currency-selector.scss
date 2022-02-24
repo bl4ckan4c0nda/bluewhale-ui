@@ -1,0 +1,46 @@
+.currency-selector-trigger {
+
+  .title {
+    font-weight: 500;
+  }
+
+  .sub-title {
+    font-weight: 400;
+  }
+
+  .title, .sub-title, .no-selected-txt {
+    font-size: 15px;
+    margin-right: 8px;
+    padding-top: 5px;
+  }
+
+  .symbol {
+    margin-right: 8px;
+  }
+
+}
+
+/* Crypto Selector */
+.currency-selector-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.75rem;
+  cursor: pointer;
+
+  .title {
+    font-weight: 500;
+  }
+  .sub-title {
+    font-weight: 400;
+    color: $text-muted;
+  }
+  .title, .sub-title {
+    font-size: 15px;
+    margin-right: 8px;
+    padding-top: 5px;
+  }
+  .symbol {
+    margin-right: 8px;
+  }
+}

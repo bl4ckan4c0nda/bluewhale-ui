@@ -235,17 +235,57 @@
                                 <div class="col-12 col-md-10 col-lg-8 col-xl-3 mx-auto">
                                     <form action="">
 
-                                        <!-- begin:: choose your coin -->
+                                        <!-- begin:: Order details -->
                                         <div class="my-5">
+
+                                            <span class="form-label">جزئیات سفارش شما</span>
+
+                                            <!-- begin:: Order details wrapper -->
+                                            <div class="order-details-wrapper">
+                                                <div class="items">
+                                                    <div class="item">
+                                                        <span class="title">سرویس</span>
+                                                        <span class="desc">آیپی ثابت و اختصاصی</span>
+                                                    </div>
+                                                    <div class="item">
+                                                        <span class="title">مدت زمان</span>
+                                                        <span class="desc">یک ماهه</span>
+                                                    </div>
+                                                    <div class="item">
+                                                        <span class="title">نوع سرویس</span>
+                                                        <span class="desc">اختصاصی</span>
+                                                    </div>
+                                                    <div class="item">
+                                                        <span class="title">تعداد دستگاه همزمان</span>
+                                                        <span class="desc">سه دستگاه</span>
+                                                    </div>
+                                                    <div class="item">
+                                                        <span class="title">شناسه سفارش</span>
+                                                        <span class="desc">IP86354253</span>
+                                                    </div>
+                                                </div>
+                                                <div class="divide"></div>
+                                                <div class="total-cost">
+                                                    <span class="title">مبلغ قابل پرداخت</span>
+                                                    <span class="price">$5.00</span>
+                                                </div>
+                                            </div>
+                                            <!-- end:: Order details wrapper -->
+
+                                        </div>
+                                        <!-- end:: Order details -->
+                                        
+                                        <!-- begin:: choose your coin -->
+                                        <div class="mb-5">
 
                                             <!-- begin:: Selector Trigger -->
                                             <span class="form-label">ارز مورد نظر خود را انتخاب کنید</span>
-                                            <div class="currency-selector-trigger" data-bs-toggle="modal"
-                                                 data-bs-target="#select-currency">
-                                                <span class="sub-title"></span>
-                                                <span class="title"></span>
-                                                <span class="symbol"><i class=""></i></span>
-                                                <span class="no-selected-txt">Please choose your coin</span>
+                                            <div class="selector-trigger currency-selector-trigger" data-bs-toggle="modal"
+                                                 data-bs-target="#select-currency" data-toggle="selector" data-target="cryptocurrency_selector">
+                                                <span class="sub-title" coinFullName></span>
+                                                <span class="title" coinShortName toUpperCase></span>
+                                                <span class="symbol"><i class="" symbol toggleClass></i></span>
+                                                <span class="no-selected-txt text-muted" defaultText>Please choose your coin</span>
                                             </div>
                                             <!-- end:: Selector Trigger -->
 
@@ -275,13 +315,13 @@
                                                         <!-- end:: Search Crypto Name -->
 
                                                         <!-- begin:: POP UP select radio -->
-                                                        <label class="popup-selector-wrapper">
-                                                                <span class="selector-item">
+                                                        <label class="popup-selector-wrapper" data-selector id="cryptocurrency_selector">
+                                                            <span class="selector-item">
                                                                     <input type="radio" name="coin" value="1"
                                                                            class="form-selectgroup-input"
                                                                            data-symbol="btc" data-coin-short-name="btc"
-                                                                           data-coin-full-name="Bitcoin" checked>
-                                                                    <span class="crypto-selector">
+                                                                           data-coin-full-name="Bitcoin">
+                                                                    <span class="currency-selector-content selector-content">
                                                                         <div class="">
                                                                             <span class="fa-name">بیتکوین</span>
                                                                         </div>
@@ -299,7 +339,7 @@
                                                                            data-symbol="usdt"
                                                                            data-coin-short-name="usdt"
                                                                            data-coin-full-name="TheterUS">
-                                                                <span class="crypto-selector">
+                                                                <span class="currency-selector-content selector-content">
                                                                         <div class="">
                                                                             <span class="fa-name">تتر</span>
                                                                         </div>
@@ -316,7 +356,7 @@
                                                                            class="form-selectgroup-input"
                                                                            data-symbol="trx" data-coin-short-name="trx"
                                                                            data-coin-full-name="Tron">
-                                                                <span class="crypto-selector">
+                                                                <span class="currency-selector-content selector-content">
                                                                         <div class="">
                                                                             <span class="fa-name">ترون</span>
                                                                         </div>
@@ -333,7 +373,76 @@
                                                                            class="form-selectgroup-input"
                                                                            data-symbol="ada" data-coin-short-name="ada"
                                                                            data-coin-full-name="Cardano">
-                                                                <span class="crypto-selector">
+                                                                <span class="currency-selector-content selector-content">
+                                                                        <div class="">
+                                                                            <span class="fa-name">کاردانو</span>
+                                                                        </div>
+                                                                        <div class="d-flex align-items-center">
+                                                                            <span class="sub-title">Cardano</span>
+                                                                            <span class="title">ADA</span>
+                                                                            <i class="symbol ada"></i>
+                                                                        </div>
+
+                                                                    </span>
+                                                                </span>
+                                                            <span class="selector-item">
+                                                                    <input type="radio" name="coin" value="1"
+                                                                           class="form-selectgroup-input"
+                                                                           data-symbol="btc" data-coin-short-name="btc"
+                                                                           data-coin-full-name="Bitcoin">
+                                                                    <span class="currency-selector-content selector-content">
+                                                                        <div class="">
+                                                                            <span class="fa-name">بیتکوین</span>
+                                                                        </div>
+                                                                        <div class="d-flex align-items-center">
+                                                                            <span class="sub-title">Bitcoin</span>
+                                                                            <span class="title">BTC</span>
+                                                                            <i class="symbol btc"></i>
+                                                                        </div>
+
+                                                                    </span>
+                                                                </span>
+                                                            <span class="selector-item">
+                                                                    <input type="radio" name="coin" value="2"
+                                                                           class="form-selectgroup-input"
+                                                                           data-symbol="usdt"
+                                                                           data-coin-short-name="usdt"
+                                                                           data-coin-full-name="TheterUS">
+                                                                <span class="currency-selector-content selector-content">
+                                                                        <div class="">
+                                                                            <span class="fa-name">تتر</span>
+                                                                        </div>
+                                                                        <div class="d-flex align-items-center">
+                                                                            <span class="sub-title">TheterUS</span>
+                                                                            <span class="title">USDT</span>
+                                                                            <i class="symbol usdt"></i>
+                                                                        </div>
+
+                                                                    </span>
+                                                                </span>
+                                                            <span class="selector-item">
+                                                                    <input type="radio" name="coin" value="3"
+                                                                           class="form-selectgroup-input"
+                                                                           data-symbol="trx" data-coin-short-name="trx"
+                                                                           data-coin-full-name="Tron">
+                                                                <span class="currency-selector-content selector-content">
+                                                                        <div class="">
+                                                                            <span class="fa-name">ترون</span>
+                                                                        </div>
+                                                                        <div class="d-flex align-items-center">
+                                                                            <span class="sub-title">Tron</span>
+                                                                            <span class="title">TRX</span>
+                                                                            <i class="symbol trx"></i>
+                                                                        </div>
+
+                                                                    </span>
+                                                                </span>
+                                                            <span class="selector-item">
+                                                                    <input type="radio" name="coin" value="4"
+                                                                           class="form-selectgroup-input"
+                                                                           data-symbol="ada" data-coin-short-name="ada"
+                                                                           data-coin-full-name="Cardano">
+                                                                <span class="currency-selector-content selector-content">
                                                                         <div class="">
                                                                             <span class="fa-name">کاردانو</span>
                                                                         </div>
@@ -353,6 +462,102 @@
                                             <!-- end:: Crypto Selector modal -->
                                         </div>
                                         <!-- end:: choose your coin -->
+
+                                        <!-- begin:: choose your Network -->
+                                        <div class="mb-5">
+
+                                            <!-- begin:: Selector Trigger -->
+                                            <span class="form-label">شبکه ارز را انتخاب کنید</span>
+                                            <div class="selector-trigger network-selector-trigger" data-bs-toggle="modal"
+                                                 data-bs-target="#select-network" data-toggle="selector" data-target="network_selector">
+                                                <span class="sub-title" coinNetwork toUpperCase></span>
+                                                <span class="sub-title" coinFullName></span>
+                                                <span class="title" coinShortName toUpperCase></span>
+                                                <span class="no-selected-txt text-muted" defaultText>Please choose your network</span>
+                                            </div>
+                                            <!-- end:: Selector Trigger -->
+
+                                            <!-- begin:: Crypto Selector modal -->
+                                            <div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"
+                                                 id="select-network">
+                                                <div class="modal-dialog modal-md modal-dialog-centered"
+                                                     role="document">
+                                                    <div class="modal-content">
+
+                                                        <!-- begin:: Modal header -->
+                                                        <div class="modal-header border-0">
+                                                            <h5 class="modal-title">شبکه ارز مورد نظر را انتخاب کنید</h5>
+                                                            <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal"
+                                                                    aria-label="Close"></button>
+                                                        </div>
+                                                        <!-- end:: Modal header -->
+
+
+                                                        <!-- begin:: POP UP select radio -->
+                                                        <label class="popup-selector-wrapper" data-selector id="network_selector">
+                                                            <span class="selector-item">
+                                                                    <input type="radio" name="network" value="1"
+                                                                           class="form-selectgroup-input"
+                                                                           data-coin-short-name="trx"
+                                                                           data-coin-full-name="Tron"
+                                                                            data-coin-network="(trc20)">
+                                                                    <span class="network-selector-content selector-content">
+                                                                        <div class="d-flex flex-column justify-content-between">
+                                                                            <span class="arrival-time">زمان رسیدن تراکنش <span>≈ 5 دقیقه</span></span>
+                                                                            <span class="fee">کارمزد شبکه <span>1 USDT ≈</span></span>
+                                                                        </div>
+                                                                        <div class="d-flex flex-column align-items-end">
+                                                                            <span class="title">TRX</span>
+                                                                            <span class="sub-title">Tron (TRC20)</span>
+                                                                        </div>
+
+                                                                    </span>
+                                                                </span>
+                                                            <span class="selector-item">
+                                                                    <input type="radio" name="network" value="2"
+                                                                           class="form-selectgroup-input"
+                                                                           data-coin-short-name="bnb"
+                                                                           data-coin-full-name="BNB Beacon Chain"
+                                                                           data-coin-network="(BEP2)">
+                                                                    <span class="network-selector-content selector-content">
+                                                                        <div class="d-flex flex-column justify-content-between">
+                                                                            <span class="arrival-time">زمان رسیدن تراکنش <span>≈ 5 دقیقه</span></span>
+                                                                            <span class="fee">کارمزد شبکه <span>1 USDT ≈</span></span>
+                                                                        </div>
+                                                                        <div class="d-flex flex-column align-items-end">
+                                                                            <span class="title">BNB</span>
+                                                                            <span class="sub-title">BNB Beacon Chain (BEP2)</span>
+                                                                        </div>
+
+                                                                    </span>
+                                                                </span>
+                                                            <span class="selector-item">
+                                                                    <input type="radio" name="network" value="3"
+                                                                           class="form-selectgroup-input"
+                                                                           data-coin-short-name="bsc"
+                                                                           data-coin-full-name="BNB Smart Chain"
+                                                                           data-coin-network="(BEP20)">
+                                                                    <span class="network-selector-content selector-content">
+                                                                        <div class="d-flex flex-column justify-content-between">
+                                                                            <span class="arrival-time">زمان رسیدن تراکنش <span>≈ 5 دقیقه</span></span>
+                                                                            <span class="fee">کارمزد شبکه <span>1 USDT ≈</span></span>
+                                                                        </div>
+                                                                        <div class="d-flex flex-column align-items-end">
+                                                                            <span class="title">BSC</span>
+                                                                            <span class="sub-title">BNB Smart Chain (BEP20)</span>
+                                                                        </div>
+
+                                                                    </span>
+                                                                </span>
+                                                        </label>
+                                                        <!-- end:: POP UP select radio -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- end:: Crypto Selector modal -->
+                                        </div>
+                                        <!-- end:: choose your Network -->
 
                                         <!-- begin:: Total Cost -->
                                         <div class="mb-5">

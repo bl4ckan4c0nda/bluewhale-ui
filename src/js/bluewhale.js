@@ -17,6 +17,7 @@ import './src/switcher-mode'
 import './src/wizard'
 import './src/toggle-password'
 import './src/crypto-selector'
+import './src/crypto-search'
 
 
 

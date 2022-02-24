@@ -136,7 +136,7 @@ $text-muted-light: mix($body-color, #ffffff, percentage($text-muted-light-opacit
 $text-muted-dark: mix($body-color, #ffffff, percentage($text-muted-dark-opacity)) !default;
 
 $border-color: rgba($black,.08) !default;
-$border-color-dark: rgba($white,.08) !default;
+$border-color-dark: rgba($white,.04) !default;
 //$border-color: mix($text-muted, #ffffff, percentage($border-opacity)) !default;
 $border-color-transparent: rgba($text-muted, $border-opacity) !default;
 

@@ -37,6 +37,9 @@
 @import "ui/forms/validation";
 @import "ui/forms/form-error";
 @import "ui/forms/form-control";
+@import "ui/forms/selector";
+@import "ui/forms/currency-selector";
+@import "ui/forms/network-selector";
 @import "ui/legend";
 @import "ui/lists";
 @import "ui/loaders";
@@ -70,7 +73,7 @@
 @import "ui/copy";
 @import "ui/logo";
 @import "ui/crypto-icons";
-@import "ui/crypto-selector";
+@import "ui/payments";
 
 @import "utils/background";
 @import "utils/colors";
